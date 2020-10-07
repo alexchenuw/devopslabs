@@ -32,7 +32,7 @@ This lab is to deploy a Ubuntu 16.04 LTS instance at Google Cloud and set up the
 * go back to Google Cloud console, find your instance, choose the SSH dropdown "view gcloud command" option then run it
 
 * choose "run in cloud cli", unaswer yes and authorize cloud shell requests until the user and .ssh/id_rsa.pub file is created at the instance and the prompt should be something like: 
-  <!-- Code Blocks -->
+
   ```
   xxxx@instance-1-xxxx:~$
   ```
