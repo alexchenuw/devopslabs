@@ -11,6 +11,8 @@ This lab is to deploy a Ubuntu 16.04 LTS instance at Google Cloud and set up the
 * Log in with your UW email at https://cloud.google.com
 
 * At the cloud console, top left, click navigation menu, compute engine -> VM instances, and Create instance"
+  <!-- images -->
+  ![Create a VM](https://github.com/alexchenuw/devopslabs/blob/main/Lab-1/lab1-1.png)
 
 * Specify the instance name as instance-1-yourNETID, change the boot Disk as Ubuntu 16.04 and the disk size to 100G
 
