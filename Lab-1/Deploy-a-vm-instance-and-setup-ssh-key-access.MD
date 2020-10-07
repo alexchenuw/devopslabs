@@ -21,6 +21,10 @@ This lab is to deploy a Ubuntu 16.04 LTS instance at Google Cloud and set up the
 >Part 2: set up ssh key authentication for yourself to the instance
 <!-- UL -->
 * generate a ssh key pair on your local computer/laptop by running "sshkey-gen" under Windows Powershell or MacOS terminal
+  <!-- Code Blocks -->
+  ```
+  #sshkey-gen
+  ```
 
 * keep all default settings and find where the generated file (.ssh/id_rsa.pub). and copy the text content of the file.
 
@@ -31,7 +35,7 @@ This lab is to deploy a Ubuntu 16.04 LTS instance at Google Cloud and set up the
   ```
   xxxx@instance-1-xxxx:~$
   ```
-  
+
 * get into .ssh directory under your home direcory, edit authorized_keys file, in a new line, paste the key context you copied from step 2 above, save and exit
 
 * on your local computer/laptop, run 
