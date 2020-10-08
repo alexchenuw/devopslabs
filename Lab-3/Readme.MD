@@ -2,6 +2,7 @@
 ____
 
 This lab is to create two NGINX web server containers and map both web servers to different ports on the Docker host.
+> Part one: create containers
 
 * create the first container
 ```bash
@@ -36,4 +37,11 @@ sudo docker cp index2.html secondcontainer:/usr/share/nginx/html/index.html
 ```bash
 curl http://docker-host-ip:5688/
 curl http://docker-host-ip:5699/
+```
+> Part two: run the rest Docker commandsas practice
+```bash
+sudo docker ps -a
+sudo docker image ls
+sudo docker inspect container_id
+sudo docker exec -it container_id bash
 ```
