@@ -1,13 +1,21 @@
-1, sign up a dockerhub account at https://hub.docker.com
+## Lab 4. Create a docker hub repository and push docker images to it
+___
+This lab includes two parts, part one is to create a dockerhub account and repository and part two is to push a customized docker image to the newly created docker repository.
 
-2, create a public repository
+> Part one: create a dockerhub account and repository
+* sign up an account at https://hub.docker.com
+![Docker Hub](https://github.com/alexchenuw/devopslabs/blob/main/Lab-1/lab4-1.png)
+* create a public repository
+![Docker Repository](https://github.com/alexchenuw/devopslabs/blob/main/Lab-1/lab4-2.png)
 
-3, use docker commit command to build a customized docker image
+> Part two: build and push a customized image to dockerhub repository
 
-4, tag the image with required username/repository format "docker tag image-id username/repository:tag"
+* use docker commit command to build a customized docker image
 
-5, docker login with registered credentials "docker login"
+* tag the image with required username/repository format "docker tag image-id username/repository:tag"
 
-6, publish the customized image with "docker push" command "docker push username/repository:tag"
+* docker login with registered credentials "docker login"
 
-7, check if the image shows up on your dockerhub registory
+* publish the customized image with "docker push" command "docker push username/repository:tag"
+
+* check if the image shows up on your dockerhub registory
