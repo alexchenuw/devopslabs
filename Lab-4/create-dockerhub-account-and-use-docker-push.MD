@@ -4,6 +4,7 @@ This lab includes two parts, part one is to create a dockerhub account and repos
 
 > Part one: create a dockerhub account and repository
 * sign up an account at https://hub.docker.com
+
 ![Docker Hub](https://github.com/alexchenuw/devopslabs/blob/main/Lab-4/lab4-1.png)
 * create a public repository
 ![Docker Repository](https://github.com/alexchenuw/devopslabs/blob/main/Lab-4/lab4-2.png)
