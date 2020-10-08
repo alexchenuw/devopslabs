@@ -1,5 +1,5 @@
-<!-- Headings -->
-## Deploying a VM instance into Google Cloud
+
+## Lab 1. Deploying a VM instance into Google Cloud
 ____
 
 This lab is to deploy a Ubuntu 16.04 LTS instance at Google Cloud and set up the SSH key access to it.
