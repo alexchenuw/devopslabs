@@ -9,7 +9,7 @@ echo "This is XXX's web server" > index.html
 * create a Dockerfile that builds a image from NGINX base image and have the index.html replaced with the one just created.
 ```
 FROM NGINX
-COPY index.html /var/www/index.html
+COPY index.html /usr/share/nginx/html/index.html
 ```
 * build the customized image with docker build command
 ```bash
