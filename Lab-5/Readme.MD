@@ -22,3 +22,4 @@ docker run -d -p 6788:80 XXXnginx
 ```bash
 curl http://docker-host-ip:6788/
 ```
+you should see "This is XXX's web server" as the output.
