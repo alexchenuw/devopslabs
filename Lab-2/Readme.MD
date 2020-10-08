@@ -18,7 +18,7 @@ sudo apt-get install docker.io -y
 ```bash
 sudo usermod -aG docker your-user-name
 ```
-* log out to the box and log back in.
+* log out to the VM and log back in.
 * run command 
 ```bash 
 docker version
