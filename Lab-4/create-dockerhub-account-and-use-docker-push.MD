@@ -14,6 +14,9 @@ This lab includes two parts, part one is to create a dockerhub account and repos
 > Part two: build and push a customized image to dockerhub repository
 
 * use docker commit command to build a customized docker image
+```bash
+docker tag image-id
+```
 
 * tag the image with required username/repository format
 ```bash
