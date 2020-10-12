@@ -4,7 +4,7 @@ ___
 This lab is to build a customized NGINX image that has a defined index.html file
 * Create an index.html at current folder
 ```bash
-echo " This is a customized web page by XXX" > index.html
+echo "This is a customized web page by XXX" > index.html
 ```
 * Create a Dockerfile that copies the index.html to the container image to replace the default one
 ```bash
