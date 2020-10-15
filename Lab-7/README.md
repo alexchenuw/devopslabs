@@ -37,4 +37,4 @@ _now the game app is running as a containerized app on your docker host_
 
 > push the newly built game container image to your dockerhub repository
 
-* push the new image to your dockerhub repository, follow the lab we did last week, Lab  
+* push the new image to your dockerhub repository, follow the lab we did last week, Lab 4.  
