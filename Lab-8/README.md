@@ -32,4 +32,5 @@ services:
 docker-compose up
 ```
 _you should still have the game app running, but it is on port 8080 now_
+
 _you will need also update your VM's firewall rules to allow tcp 8080 to you vm_ 
