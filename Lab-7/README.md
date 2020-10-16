@@ -1,40 +1,36 @@
-## Lab 7 Containerize a game app and push the image to Dockerhub
-____
-> install git
+## Lab 7. Run a multi-containers application with Docker-compose
+___
 
-* Install git on your Google VM
-```
+> Install Docker-compose into your VM
+* install docker-compose
+```shell
 sudo apt-get update -y
-sudo apt-get install git 
+sudo apt-get install docker-compose -y
 ```
+* check if it is installed properly
+```shell
+docker-compose version
+```
+you should see the version info
 
-> containerize a game app  
-* download a github hosted game app from https://github.com/cykod/AlienInvasion
+> run a multi-container application with docker-compose 
+
+* create a docker-compose.yaml file
 ```
-git clone https://github.com/cykod/AlienInvasion.git
-```
-* list out the directory name of the app, it should be ./AlienInvasion
-```
-ls -al
-```
-* Create a Dockerfile with the following content for building a container image from NGINX base
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - ”8080:80"
+  redis:
+    image: "redis:alpine”
 
 ```
-FROM nginx
-ADD /AienInvasion /usr/share/nginx/html
+* now run the app with command
 ```
-* build a customized container image with the dockerfile
+docker-compose up
 ```
-docker build . -t myaliengame
-```
-* start a container app with the newly built image
-```
-docker run -d -p 80:80 myaliengame
-```
-* bring up a chrome/firefox browser from your laptop and access to http://your-vm-public-ip and you should be able to see a game is up and running on your browser
+_you should still have the game app running, but it is on port 8080 now_
 
-_now the game app is running as a containerized app on your docker host_
-
-> push the newly built game container image to your dockerhub repository
-
-* push the new image to your dockerhub repository, follow the lab we did last week, Lab 4.  
+_this is just a simulation on redis, you will need code change to actually use redis to record the game scores_
