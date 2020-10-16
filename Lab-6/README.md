@@ -1,25 +1,40 @@
-## Lab 6. Build your customized NGINX image with Dockerfile
-___
+## Lab 7 Containerize a game app and push the image to Dockerhub
+____
+> install git
 
-This lab is to build a customized NGINX image that has a defined index.html file
-* Create an index.html at current folder
-```bash
-echo "This is a customized web page by XXX" > index.html
+* Install git on your Google VM
 ```
-* Create a Dockerfile that copies the index.html to the container image to replace the default one
-```bash
+sudo apt-get update -y
+sudo apt-get install git 
+```
+
+> containerize a game app  
+* download a github hosted game app from https://github.com/cykod/AlienInvasion
+```
+git clone https://github.com/cykod/AlienInvasion.git
+```
+* list out the directory name of the app, it should be ./AlienInvasion
+```
+ls -al
+```
+* Create a Dockerfile with the following content for building a container image from NGINX base
+
+```
 FROM nginx
-COPY index.html /usr/share/nginx/html/index.html
+ADD /AienInvasion /usr/share/nginx/html
 ```
-* Build a docker image from the Dockerfile
-```bash
-docker build . -t mynginx
+* build a customized container image with the dockerfile
 ```
-* Start a container from the newly built image
-```bash
-docker run -d -p 32321:80 mynginx
+docker build . -t myaliengame
 ```
-* check the container web page, you should get the customized text
-```bash
-curl http://host_ip:32321
+* start a container app with the newly built image
 ```
+docker run -d -p 80:80 myaliengame
+```
+* bring up a chrome/firefox browser from your laptop and access to http://your-vm-public-ip and you should be able to see a game is up and running on your browser
+
+_now the game app is running as a containerized app on your docker host_
+
+> push the newly built game container image to your dockerhub repository
+
+* push the new image to your dockerhub repository, follow the lab we did last week, Lab 4.  
