@@ -17,6 +17,8 @@ sudo docker run --name secondcontainer -d -p 5699:80 nginx
 curl http://docker-host-ip:5688/
 curl http://docker-host-ip:5699/
 ```
+_you will need also update your VM's firewall rules to allow tcp 8080 to you vm_ 
+
 * create the first index1.html file with the content: This is container one web server.
 ```bash
 echo "This is container one web server" >index1.html
