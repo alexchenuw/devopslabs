@@ -1,4 +1,4 @@
-## Lab 7 Containerize a game app and push the image to Dockerhub
+## Lab 6 Containerize a game app and push the image to Dockerhub
 ____
 > install git
 
