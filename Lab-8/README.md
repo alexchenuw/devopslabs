@@ -36,7 +36,7 @@ rm -rf AlienInvasion/.git/
 ```bash
 git init
 ```
-* add your GitHub repository as a remote name in git
+* add your GitHub repository as a remote name in git (refer to the screenshot 3 for your repository link)
 ```
 git remote add origin https://github.com/your-repository-xxx-xxx/lab9.git
 ```
