@@ -54,3 +54,4 @@ git commit -m "This is my first commit to GitHub Repository"
 git push origin master 
 ```
 * check your github repository, it should have the latest version of your code
+now anyone can clone your code from your github repository to their docker environment and run your app with one command "docker-compose up"
