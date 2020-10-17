@@ -5,22 +5,52 @@ ___
 
 * sign up an account at https://github.com
 
-![Sign up] 
+![Sign up](https://github.com/alexchenuw/devopslabs/blob/main/Lab-8/lab8-1.png) 
+
+* create a repository once log in with the newly created account
+
+![create a repository](https://github.com/alexchenuw/devopslabs/blob/main/Lab-8/lab8-2.png)
+
+* keep this instruction page and we will be using some of the info from this page later
+
+![git repository instruction](https://github.com/alexchenuw/devopslabs/blob/main/Lab-8/lab8-3.png)
 
 
+> initialize the local repository
+
+* create a new directory and copy your Dockerfile, docker-compose.yaml and /AlienInvasion folder into the new directory
+```shell
+mkdir lab9
+cp Dockerfile lab9/.
+cp docker-compose.yaml lab9/.
+cp -r AlienInvasion/ lab9/.
+```
 
 
-remove .git directory under /AlienInvasion so that we can initialize a new git folder
-
-change to your app directory where you the app and dockerfile
-cd AlienInvasion and remove the .git directory
-rm -rf .git
-cd ..
-
+* remove /.git directory under /AlienInvasion so that we can initialize our git folder
+```bash
+cd lab9
+rm -rf AlienInvasion/.git/
+```
+* initialize the git local repository
+```bash
 git init
-git config --global user.email "aaa@bb.com"
-git config --global user.name "XXX"
-git remote add githubrepository your-git-hub-repository
+```
+* add your GitHub repository as a remote name in git
+```
+git remote add origin https://github.com/your-repository-xxx-xxx/lab9.git
+```
+* add files and folders that you need to push to the GitHub repository
+```
 git add .
-git commit -m "my first release"
-git push githubrepository master
+```
+* commit the add with a message/note
+```
+git commit -m "This is my first commit to GitHub Repository"
+```
+* push your files and folders to GitHub repository as the master branch
+
+```shell
+git push origin master 
+```
+* check your github repository, it should have the latest version of your code
