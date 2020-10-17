@@ -1,6 +1,12 @@
 ## Lab 8. create GitHub account and publish your multi-container game app to github
 ___
 
+> Create an account and create a repository at GitHub
+
+* sign up an account at https://github.com
+
+![Sign up] 
+
 
 
 
