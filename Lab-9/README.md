@@ -24,7 +24,7 @@ mkdir -p $HOME/.kube
 ```
 * copy the cluster admin configure file to your .kube directory as "config" file
 ```
-scp user@masternodeip:/etc/Kubernetes/admin.conf $HOME/.kube/config
+scp devops@10.168.0.4:/etc/Kubernetes/admin.conf $HOME/.kube/config
 ```
 * your kubectl should be able to connect to the k8s cluster
 
