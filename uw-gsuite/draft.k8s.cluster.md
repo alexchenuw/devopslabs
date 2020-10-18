@@ -78,7 +78,7 @@ kubectl get pod --all-namespaces
 
 type in the copied message:
 ```
-sudo kubeadm join --discovery-token abcdef.1234567890abcdef --discovery-token-ca-cert-hash sha256:1234..cdef 1.2.3.4:6443
+sudo kubeadm join 10.168.0.4:6443 --token v7ylqj --discovery-token-ca-cert-hash sha256:3f5b65334.cde43
 ```
 
 
