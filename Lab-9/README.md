@@ -22,7 +22,7 @@ sudo apt-get install kubectl -y
 ```
 mkdir -p $HOME/.kube
 ```
-* copy the cluster admin configure file to your .kube directory as "config" file
+* copy the cluster admin configure file to your .kube directory as "config" file, password (uwdevops)
 ```
 scp devops@10.168.0.4:/etc/Kubernetes/admin.conf $HOME/.kube/config
 ```
