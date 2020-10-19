@@ -1,7 +1,7 @@
 ## Lab 11. Create a two container pod using YAML
 ___
 
-* create a pod with two containers via the following code
+* create a yaml file to define a pod with two containers:
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -16,6 +16,12 @@ spec:
       - name: redis
         image: redis
 ```
+* create the pod with your yaml file
+
+```
+kubectl create -f your-file-name.yaml
+```
+
 
 * run some pod related command to inspect pod information
 
