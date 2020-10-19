@@ -34,9 +34,9 @@ kubectl describe pod podwith2containers
 ```
 kubectl exec -it podwith2containers sh
 ```
-did you get an error message trying to run the interactive with a pod? what was the issue?
+_did you get an error message trying to run the interactive with a pod? what was the issue?
 
-it is because, when there are more than one container in a pod, you need -c to specify which container you want to run into, or you will run into the default (first) container in the pod.
+_it is because, when there are more than one container in a pod, you need -c to specify which container you want to run into, or you will run into the default (first) container in the pod._
 ```
 kubectl exec -it podwith2containers -c redis sh
 ```
