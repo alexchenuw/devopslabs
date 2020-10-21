@@ -6,16 +6,16 @@ This lab is to create two NGINX web server containers and map both web servers t
 
 * create the first container
 ```bash
-sudo docker run --name firstcontainer -d -p 5688:80 nginx
+sudo docker run --name firstcontainer -d -p 8688:80 nginx
 ```
 * create the second container 
 ```bash
-sudo docker run --name secondcontainer -d -p 5699:80 nginx
+sudo docker run --name secondcontainer -d -p 8699:80 nginx
 ```
 * test web server homepage on both servers
 ```bash
-curl http://docker-host-ip:5688/
-curl http://docker-host-ip:5699/
+curl http://docker-host-ip:8688/
+curl http://docker-host-ip:8699/
 ```
 _you will need also update your VM's firewall rules to allow tcp 8080 to you vm_ 
 
@@ -37,8 +37,8 @@ sudo docker cp index2.html secondcontainer:/usr/share/nginx/html/index.html
 ```
 * check the web server home pages on the first container and second container
 ```bash
-curl http://docker-host-ip:5688/
-curl http://docker-host-ip:5699/
+curl http://docker-host-ip:8688/
+curl http://docker-host-ip:8699/
 ```
 > Part two: run the rest Docker commandsas practice
 ```bash
