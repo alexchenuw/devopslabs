@@ -1,8 +1,8 @@
-## Lab 12. Create your own namespace and set it as your default namespace
+## Lab 12. Create a new namespace and set it as your default namespace
 ___
-> create your own namespace
+> create a new namespace
 
-* create a namespace for yourself on the cluster
+* create a new namespace on the cluster
 ```
 kubectl create namespace <name of your namespace, use your netid here>
 ```
@@ -14,7 +14,7 @@ metadata:
    name: <name of your namespace, use your netid as the name here>
 ```
 
-> set your namespace as your working namespace
+> set the new namespace as your default working namespace
 
 * show the namespace you just created
 ```
@@ -25,13 +25,15 @@ kubectl get namespace
 kubectl config set-context --current--namespace=yournamespace
 ```
 
-* verify you are on your namespace by creating a pod in your new namespace
+* verify you are on your namespace by creating a pod and display the pod
 ```
 kubectl get pod
 
 kubectl run mynewpod --image=nginx
 
 kubectl get pod
+
+kubectl get pod --all-namespaces
 ```
 
 you should see the pod now resides in your default namespace now
