@@ -25,7 +25,7 @@ kubectl get namespace
 ```
 * set the namespace you just created as your default working namespace 
 ```
-kubectl config set-context --current--namespace=yournamespace
+kubectl config set-context --current --namespace=yournamespace
 ```
 
 * verify you are on your namespace by creating a pod and display the pod
