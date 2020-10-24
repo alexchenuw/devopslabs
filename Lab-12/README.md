@@ -13,6 +13,9 @@ kind: Namespace
 metadata:
    name: <name of your namespace, use your netid as the name here>
 ```
+```bash
+kubectl create -f your-namespace-creating.yaml 
+```
 
 > set the new namespace as your default working namespace
 
