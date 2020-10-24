@@ -5,7 +5,7 @@ This lab is to create a emptyDir volume and containers insie a pod can mount it 
 
 * create a yaml file that defines two containers, one emptydir volume and both containers mount the volume to its local directory
 
-pod_with_2containers_emptydir.yaml
+pod_with_2containers_volume.yaml
 ```yaml
 apiVersion: v1
 kind: Pod
