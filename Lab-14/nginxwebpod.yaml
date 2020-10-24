@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginxwebpod
+  labels:
+    web: nginx 
+spec:
+      containers:
+      - name: nginxcontainer
+        image: nginx
