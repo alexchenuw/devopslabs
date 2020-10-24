@@ -4,6 +4,7 @@ ___
 > Create a pod with a label
 
 * create a yaml file that defines a pod and a label for the pod
+nginxwebpod.yaml
 
 ```yaml
 apiVersion: v1
