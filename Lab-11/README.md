@@ -1,12 +1,12 @@
 ## Lab 11. Create a two container pod using YAML
 ___
 
-* create a yaml file to define a pod with two containers:
+* create a yaml file to define a pod with two containers, add your netID as part of the pod name so it does not conflict with others
 ```yaml
 apiVersion: v1
 kind: Pod
 metadata:
-  name: podwith2containers
+  name: achen-podwith2containers
 spec:
       containers:
       - name: busyboxcontainer
