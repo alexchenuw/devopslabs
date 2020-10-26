@@ -13,11 +13,11 @@ sudo apt-get install docker.io -y
 sudo systemctl enable docker
 ```
 > Install k8s components to all three instances
-* 4. add the sign key
+ 4. add the sign key
  ```
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add
 ```
-* 5. Add the repository and update the repository list again
+ 5. Add the repository and update the repository list again
 ```
 sudo apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
 
