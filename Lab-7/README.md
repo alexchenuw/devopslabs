@@ -2,35 +2,39 @@
 ___
 
 > Install Docker-compose into your VM
+
 * install docker-compose
+
 ```shell
 sudo apt-get update -y
 sudo apt-get install docker-compose -y
 ```
-* check if it is installed properly
-```shell
-docker-compose version
-```
-you should see the version info
 
-> run a multi-container application with docker-compose 
+* confirm that docker compose is installed, you should see details about the version installed.
+
+```shell
+docker-compose -version
+```
+
+>run a multi-container application with docker-compose 
+
+Complete this work in the folder "lab-6" as the docker-compose.yaml file assumes there is a Dockerfile in the same directory.
 
 * create a docker-compose.yaml file
 ```
-version: '3'
+version: '2'
 services:
   web:
     build: .
     ports:
-      - ”8080:80"
+      - "8080:80"
   redis:
-    image: "redis:alpine”
-
+    image: "redis:alpine"
 ```
 * now run the app with command
 ```
 docker-compose up
 ```
-_you should still have the game app running, but it is on port 8080 now_
+_you should still have the game app running, but it is on port 8080 in addtion to port 80.
 
 _this is just a simulation on redis, you will need code change to actually use redis to record the game scores_
