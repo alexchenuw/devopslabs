@@ -20,16 +20,16 @@ ___
 
 * create a new directory and copy your Dockerfile, docker-compose.yaml and /AlienInvasion folder into the new directory
 ```shell
-mkdir lab9
-cp Dockerfile lab9/.
-cp docker-compose.yaml lab9/.
-cp -r AlienInvasion/ lab9/.
+mkdir lab8
+cp Dockerfile lab8/.
+cp docker-compose.yaml lab8/.
+cp -r AlienInvasion/ lab8/.
 ```
 
 
 * remove /.git directory under /AlienInvasion so that we can initialize our git folder
 ```bash
-cd lab9
+cd lab8
 rm -rf AlienInvasion/.git/
 ```
 * initialize the git local repository
@@ -38,7 +38,7 @@ git init
 ```
 * add your GitHub repository as a remote name in git (refer to the screenshot 3 for your repository link)
 ```
-git remote add origin https://github.com/your-repository-xxx-xxx/lab9.git
+git remote add origin https://github.com/your-repository-xxx-xxx/alieninvasion.git
 ```
 * add files and folders that you need to push to the GitHub repository
 ```
