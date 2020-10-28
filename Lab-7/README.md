@@ -33,7 +33,7 @@ services:
 ```
 * now run the app with command
 ```
-docker-compose up
+docker-compose up -d
 ```
 > Note: you should still have the game app running, but it is running now on port 8080 in addtion to port 80.
 
