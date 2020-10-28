@@ -33,12 +33,17 @@ cd lab8
 rm -rf AlienInvasion/.git/
 ```
 * initialize the git local repository
+
 ```bash
 git init
+git config --global user.name "<Your Git User name>" 
+git config --global user.email YOU@<YOUR email domain>
+git config --global color.ui "auto"
+git config --list
 ```
 * add your GitHub repository as a remote name in git (refer to the screenshot 3 for your repository link)
 ```
-git remote add origin git@github.com:your-repository-xxx-xxx/alieninvasion.git
+git remote add origin git@github.com/your-repository-xxx-xxx/alieninvasion.git
 ```
 * add files and folders that you need to push to the GitHub repository
 ```
