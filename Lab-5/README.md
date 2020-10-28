@@ -20,7 +20,7 @@ echo "This is XXX's web server" > index.html
 >Note: The Dockerfile should literally be called **Dockerfile**
 
 ```
-FROM NGINX
+FROM nginx
 COPY index.html /usr/share/nginx/html/index.html
 ```
 
