@@ -38,7 +38,7 @@ git init
 ```
 * add your GitHub repository as a remote name in git (refer to the screenshot 3 for your repository link)
 ```
-git remote add origin https://github.com/your-repository-xxx-xxx/alieninvasion.git
+git remote add origin git@github.com/your-repository-xxx-xxx/alieninvasion.git
 ```
 * add files and folders that you need to push to the GitHub repository
 ```
