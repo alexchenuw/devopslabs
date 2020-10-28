@@ -35,6 +35,6 @@ services:
 ```
 docker-compose up
 ```
-_you should still have the game app running, but it is on port 8080 in addtion to port 80.
+> Note: you should still have the game app running, but it is running now on port 8080 in addtion to port 80.
 
-_this is just a simulation on redis, you will need code change to actually use redis to record the game scores_
+> Note: this is just a simulation on redis, you will need code change to actually use redis to record the game scores_
