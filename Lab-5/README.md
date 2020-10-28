@@ -30,11 +30,22 @@ COPY index.html /usr/share/nginx/html/index.html
 docker build . -t mywebpage
 ```
 
-* Create a container based on the your new image.  Check the content of the default webpage using "curl" to ensure it includes your first name.
+* Create a container based on the your new image.  Check the content of the default webpage using "curl" to ensure it includes your first name.  You should see "This is {firstname}'s web server" as the output from your webserver.
 
 ```bash
 docker run -d -p 8788:80 mywebpage
-curl http://docker-host-ip:8788/
+curl http://localhost:8788/
+```
+Next try to reach your webserver using the public IP address associated to your linux. 
+
+>Note: Also test your new webserver using a browser
+
+```bash
+export MYIP=`curl ifconfig.io`
+curl http://${MYIP}:8788
 ```
 
-you should see "This is {firstname}'s web server" as the output.
+Lab complete
+___
+
+
