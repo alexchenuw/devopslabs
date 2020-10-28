@@ -31,8 +31,8 @@ docker build . -t mywebpage
 * Create a container based on the your new image.  Check the content of the default webpage using "curl" to ensure it includes your first name.
 
 ```bash
-docker run -d -p 6788:80 mywebpage
-curl http://docker-host-ip:6788/
+docker run -d -p 8788:80 mywebpage
+curl http://docker-host-ip:8788/
 ```
 
 you should see "This is {firstname}'s web server" as the output.
