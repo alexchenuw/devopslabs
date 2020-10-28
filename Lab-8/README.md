@@ -45,6 +45,8 @@ git config --list
 ```
 git remote add origin git@github.com/your-repository-xxx-xxx/alieninvasion.git
 ```
+![git clone](https://github.com/alexchenuw/devopslabs/blob/main/Lab-8/git-clone.png)
+
 * add files and folders that you need to push to the GitHub repository
 ```
 git add .
