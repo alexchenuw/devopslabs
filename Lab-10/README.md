@@ -12,7 +12,7 @@ kubectl run myfirstpod-$USER --image=nginx
 
 1. What is the status of your pod?
 1. What is the IP address assigned to your pod? 
-1. What is node is your pod running on? 
+1. What node is your pod running on? 
 1. What is your pod container ID?
 
 ```bash
