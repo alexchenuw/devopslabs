@@ -30,9 +30,11 @@ kubectl version
 ```bash
 mkdir -p $HOME/.kube
 ```
-* Now copy the cluster admin configure file to your .kube directory as "config" file.  Note the password for the remote user is **uwdevops**
-```
+* Now copy the cluster admin configure file to your .kube directory as "config" file.  Note the password for the remote user is **uwdevops**.  Once you have the file copied over locally review the contents of that file.
+
+```bash
 scp devops@10.168.0.4:/etc/kubernetes/admin.conf $HOME/.kube/config
+cat $HOME/.kube/config
 ```
 * your kubectl should be able to connect to the k8s cluster
 
