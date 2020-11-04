@@ -3,26 +3,34 @@ ____
 
 > Install kubectl to your Ubuntu vm
 
-* adding the signing key to apt-get
-```
+* adding the signing key using apt-get
+
+```bash
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add
+apt-key list
 ```
-* Kubernetes packages are not included in the default repositories. To add them, enter the following:
-```
+* Kubernetes packages are not included in the default repositories. To add them use apt-add-repository.  This will update your sources.list file.
+
+```bash
 sudo apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
+tail /etc/apt/sources.list
 ```
-* now install the kubectl tool to your Ubuntu instance
+
+* now install the kubectl tool on your Ubuntu instance.  Once installed you can confirm the location and version installed.
 ```
 sudo apt-get update -y
 sudo apt-get install kubectl -y
+which kubectl
+kubectl version
 ```
 > Connect your kubectl to the class k8s cluster
 
-* create a directory for the cluster
-```
+* create a directory for the cluster configuration.  You will then copy the cluster configuration from a remote host to your .kube directory and rename the file "config". 
+
+```bash
 mkdir -p $HOME/.kube
 ```
-* copy the cluster admin configure file to your .kube directory as "config" file, password (uwdevops)
+* Now copy the cluster admin configure file to your .kube directory as "config" file.  Note the password for the remote user is **uwdevops**
 ```
 scp devops@10.168.0.4:/etc/kubernetes/admin.conf $HOME/.kube/config
 ```
@@ -30,4 +38,5 @@ scp devops@10.168.0.4:/etc/kubernetes/admin.conf $HOME/.kube/config
 
 ```
 kubectl get node
+kubectl cluster-info
 ```
