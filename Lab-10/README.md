@@ -2,7 +2,7 @@
 
 * deploy a nginx pod using your netid in the name.  This will ensure we have unique pods created in the lab.  
 
->Note: Replace $USER with your uw netID.
+>Note: Replace $USER with your uw netID.  If you don't replace $USER with your netID your linux host will replace that variable with the userid used to login to your linux host.
 
 ```bash
 kubectl run myfirstpod-$USER --image=nginx
