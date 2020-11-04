@@ -29,14 +29,14 @@ kubectl create -f your-file-name.yaml
 kubectl get pod
 ```
 ```
-kubectl describe pod podwith2containers
+kubectl describe pod achen-podwith2containers
 ```
 ```
-kubectl exec -it podwith2containers sh
+kubectl exec -it achen-podwith2containers sh
 ```
 _did you get an error message trying to run the interactive with a pod? what was the issue?_
 
 _it is because, when there are more than one container in a pod, you need -c to specify which container you want to run into, or you will run into the default (first) container in the pod._
 ```
-kubectl exec -it podwith2containers -c redis sh
+kubectl exec -it achen-podwith2containers -c redis sh
 ```
