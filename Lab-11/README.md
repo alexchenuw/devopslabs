@@ -28,7 +28,7 @@ kubectl create -f multi-pod.yaml
 ```bash
 kubectl get pods
 kubect get pods $USER-podwith2containers
-kubectl describe pod achen-podwith2containers
+kubectl describe pod $USER-podwith2containers
 ```
 
 * Now we log in to the pod directly and spawn a shell
@@ -42,4 +42,6 @@ _it is because, when there are more than one container in a pod, you need -c to 
 
 ```bash
 kubectl exec -it $USER-podwith2containers -c redis sh
+exit
+kubectl exec -it $USER-podwith2containers -c busyboxcontainer sh
 ```
