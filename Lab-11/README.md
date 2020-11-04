@@ -19,6 +19,8 @@ spec:
 ```
 * create the pod with your yaml file
 
+>Note: If you receive an error when creating your pod make sure you changed $USER in the yaml file to your **NetID**
+
 ```bash
 kubectl create -f multi-pod.yaml
 ```
