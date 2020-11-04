@@ -1,15 +1,23 @@
 ## Lab 10. Deploy a NGINX pod in the k8s environment
 
-* deploy a nginx pod, choose a name with your netid as the pod name so it is unique with pods created by other students
+* deploy a nginx pod using your netid in the name.  This will ensure we have unique pods created in the lab.  
+
+>Note: Replace $USER with your uw netID.
+
 ```bash
-kubectl run myfirstpod-achen --image=nginx
+kubectl run myfirstpod-$USER --image=nginx
 ```
 
-* run a few commands to get to know more about the pod
+* Now run the following commands to extract details from your pod.  See if you can answer these questions.
 
-```
-kubectl get pod myfirstpod-achen
-kubectl get pod myfirstpod-achen -o wide
-kubectl describe pod myfirstpod-achen
-kubectl logs myfirstpod-achen
+1. What is the stauts of your pod?
+1. What is the IP address assigned to your pod? 
+1. What is node is your pod running on? 
+1. What is your pod container ID?
+
+```bash
+kubectl get pod myfirstpod-$USER
+kubectl get pod myfirstpod-$USER -o wide
+kubectl describe pod myfirstpod-$USER
+kubectl logs myfirstpod-$USER
 ```
