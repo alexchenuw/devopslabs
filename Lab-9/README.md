@@ -35,8 +35,9 @@ mkdir -p $HOME/.kube
 ```bash
 scp devops@10.168.0.4:/etc/kubernetes/admin.conf $HOME/.kube/config
 cat $HOME/.kube/config
+grep "cluster\|server" .kube/config
 ```
-* your kubectl should be able to connect to the k8s cluster
+* your kubectl should now be able to connect to the shared k8s cluster.  Later in the course we will install and configure dedicated Kubernetes clusters but initially we are working with a shared running Kubernetes instance.
 
 ```
 kubectl get node
