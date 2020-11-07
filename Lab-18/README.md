@@ -1,27 +1,44 @@
-## Lab 18. init container and liveness container
+## Lab 18. create an init container and a liveness container for a pod
+___
 
+> ### Create an init container for a pod
 
-> init container
+_Have the init container perform an operation, until the return is successful, continue to create the other containers in the same pod.
+the init container will first download a webpage from a repository and place it at a shared dir, once it completes that, the web server container will be spun up._
+
+cat lab_init_container.yaml
 ```yaml
 apiVersion: v1
 kind: Pod
 metadata:
-  name: myapp-pod
-  labels:
-    app: myapp
+  name: init-demo
 spec:
   containers:
-  - name: myapp-container
-    image: busybox:1.28
-    command: ['sh', '-c', 'echo The app is running! && sleep 3600']
+  - name: nginx
+    image: nginx
+    volumeMounts:
+    - name: workdir
+      mountPath: /usr/share/nginx/html
+  # These containers are run during pod initialization
   initContainers:
-  - name: init-myservice
-    image: busybox:1.28
-    command: ['sh', '-c', "until nslookup myservice.$(cat /var/run/secrets/kubernetes.io/serviceaccount/namespace).svc.cluster.local; do echo waiting for myservice; sleep 2; done"]
+  - name: install
+    image: busybox
+    command:
+    - wget
+    - "-O"
+    - "/work-dir/index.html"
+    - http://info.cern.ch
+    volumeMounts:
+    - name: workdir
+      mountPath: "/work-dir"
+  dnsPolicy: Default
+  volumes:
+  - name: workdir
+    emptyDir: {}
 ``` 
 
 
-
+> ### Create a liveness container for a pod
 
 > liveness container
 
