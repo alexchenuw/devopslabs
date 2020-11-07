@@ -28,7 +28,7 @@ spec:
     - wget
     - "-O"
     - "/work-dir/index.html"
-    - http://www.google.com
+    - https://github.com/alexchenuw/devopslabs/blob/main/Lab-18/index.html
     volumeMounts:
     - name: workdir
       mountPath: "/work-dir"
@@ -38,10 +38,23 @@ spec:
     emptyDir: {}
 ``` 
 
+* use kubectl describe the pod and check the deploying events, it should show the events in order.
+```
+kubectl describe pod init-demo
+```
+
+* we can also expose the pod service to find out what it is showing
+
+```
+kubectl expose pod/init-demo --type=NodePort --port=80 --target-port=80
+kubectl get svc
+```
+* open a browser on your local laptop and browse to http://node-public-ip:serviceportnumber, you should be able to get the webpage
+
 
 > ### Create a liveness container for a pod
 
-> liveness container
+* create a liveness container in a pod 
 
 cat liveness_container.yaml
 ```yaml
