@@ -81,3 +81,17 @@ spec:
       periodSeconds: 5
       
 ```
+* create the pod
+```
+kubectl create -f liveness_container.yaml
+```
+* check the deploy events with the pod multiple times
+```
+kubectl describe pod liveness-exec
+```
+* show the pod and check how many times it has been restarted
+```
+kubectl get pod liveness-exec
+```
+
+
