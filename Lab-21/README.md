@@ -41,15 +41,15 @@ or
 ```
 sudo hostnamectl set-hostname k8snode1-chenalex
 ```
-9. edit /etc/hosts file on three instances and add three lines 
+9. find the ip address of the three VMs on the console and edit /etc/hosts file on three instances and add three lines 
 ```
 sudo vi /etc/hosts
 ```
 ```
-10.168.0.4    k8smaster
-10.168.0.5    k8snode1
-10.168.0.7    k8snode2
-````
+10.1xx.0.4    k8smaster-chenalex
+10.1xx.0.5    k8snode1-chenalex
+10.1xx.0.7    k8snode2-chenalex
+```
 
 10. now on the master node:
 
@@ -57,7 +57,7 @@ sudo vi /etc/hosts
 sudo kubeadm init --pod-network-cidr=10.244.0.0/16
 ```
 
-11. copy the last log showing "kubeadm join 10.168.0.4..." to the end of the message 
+11. copy the last log showing something like "kubeadm join 10.168.0.4..." to the end of the message 
 
 12. create the k8s cluster directory
 ```
@@ -78,9 +78,9 @@ sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Do
 kubectl get pod --all-namespaces
 ```
 
-> now on node
+> now run the following command on each of the two node VM:
 
-15. type in the copied message:
+15. paste in the copied message:
 ```
 sudo kubeadm join 10.168.0.4:6443 --token v7ylqj --discovery-token-ca-cert-hash sha256:3f5b65334.cde43
 ```
