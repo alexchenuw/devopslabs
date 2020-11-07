@@ -12,6 +12,8 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: init-demo
+  labels:
+     disk: ssd
 spec:
   containers:
   - name: nginx
@@ -19,7 +21,6 @@ spec:
     volumeMounts:
     - name: workdir
       mountPath: /usr/share/nginx/html
-  # These containers are run during pod initialization
   initContainers:
   - name: install
     image: busybox
@@ -27,7 +28,7 @@ spec:
     - wget
     - "-O"
     - "/work-dir/index.html"
-    - http://info.cern.ch
+    - http://www.google.com
     volumeMounts:
     - name: workdir
       mountPath: "/work-dir"
