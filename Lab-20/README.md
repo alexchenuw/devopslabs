@@ -1,7 +1,7 @@
 ## Lab 20. Scale out/in a deployment, roll update a deployment
 ___
 
-_ This lab we will be simulating a couple of application administration scenarios: scale out and in the traffic processing capacity, upgrade/downgrade the container images and rolling back from the upgrade/downgrade_
+_This lab we will be simulating a couple of application administration scenarios: scale out and in the traffic processing capacity, upgrade/downgrade the container images and rolling back from the upgrade/downgrade_
 
 * create the deployment from lab 19 again if it has been deleted/removed
 ```
