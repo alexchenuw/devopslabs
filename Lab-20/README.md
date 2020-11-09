@@ -27,7 +27,8 @@ kubectl get pod
 ```
 * scale the deployment to any number you like
 
-> upgrade/downgrade the nginx container image to the AienInvasion image you have created earlier, in my case it is alexchen2015/alex001:mypersonalnginx
+
+> ### upgrade/downgrade the nginx container image to the AienInvasion image you have created earlier, in my case it is alexchen2015/alex001:mypersonalnginx
 
 * upgrade the nginx image in the deplpoyment to my version
 ```
