@@ -85,6 +85,8 @@ kubectl get svc lab19external
 
 so the combined deployment and service yaml file is like:
 
+cat lab19_combined.yaml
+
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -123,4 +125,14 @@ spec:
           targetPort: 80
 ```
 
+* delete the earlier deployment and service first
+```
+kubectl delete -f lab19_service.yaml
+kubectl delete -f lab19_deployment.yaml
+```
+* now run create the deployment and service together
+```
+kubectl create -f lab19_combined.yaml
+```
+* verify the deployment and service
 
