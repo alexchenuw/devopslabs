@@ -91,6 +91,7 @@ sudo kubeadm join 10.168.0.4:6443 --token v7ylqj --discovery-token-ca-cert-hash 
 kubectl get node
 ```
 
+17. set the kubectl on your workstation VM to point to the cluster created here
 
 
 
