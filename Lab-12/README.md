@@ -1,31 +1,39 @@
 ## Lab 12. Create a new namespace and set it as your default namespace
 ___
-> create a new namespace
+> create a new namespace based on your NetID
 
-* create a new namespace on the cluster
+* create a new namespace on the cluster; Note: Replace $USER with your UW NetID.
 ```
-kubectl create namespace <name of your namespace, use your netid here>
+kubectl create namespace $USER
 ```
 _you can also create the namespace from a yaml file as the following, it will get you the same result_
+
 ```yaml
 apiVersion: v1
 kind: Namespace
 metadata:
-   name: <name of your namespace, use your netid as the name here>
+   name: $USER
 ```
+Assuming your namespace file is called namespace.yaml run the following command
+
 ```bash
-kubectl create -f your-namespace-creating.yaml 
+kubectl create -f namespace.yaml 
 ```
 
 > set the new namespace as your default working namespace
 
 * show the namespace you just created
-```
+
+```bash
 kubectl get namespace
 ```
-* set the namespace you just created as your default working namespace 
+
+* set the namespace you just created as your default working namespace
+
+>Note: Replace $USER with your UW NetID
+
 ```
-kubectl config set-context --current --namespace=yournamespace
+kubectl config set-context --current --namespace=$USER
 ```
 
 * verify you are on your namespace by creating a pod and display the pod
