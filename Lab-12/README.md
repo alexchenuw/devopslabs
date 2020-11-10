@@ -2,8 +2,10 @@
 ___
 > create a new namespace based on your NetID
 
-* create a new namespace on the cluster; Note: Replace $USER with your UW NetID.
-```
+* create a new namespace on the cluster
+>Note: Replace $USER with your UW NetID.
+
+```basj
 kubectl create namespace $USER
 ```
 _you can also create the namespace from a yaml file as the following, it will get you the same result_
