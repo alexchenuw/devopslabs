@@ -1,8 +1,8 @@
 ## Lab 17. create a configmap then use it in a pod
 ___
 
-> create a configmap
-cat lab17_configmap.yaml
+> create a configmap file called `player_configmap.yaml`
+
 ```yaml
 apiVersion: v1
 kind: ConfigMap
@@ -12,14 +12,18 @@ data:
   player_initial_lives: "3"
   player_initial_gold: "10000"
 ```
+
 create the configmap
-```
-kubectl create -f lab17_configmap.yaml
+
+```bash
+kubectl create -f player_configmap.yaml
+kubectl get configmaps
+kubectl describe configmaps mygamedata
 ```
 
-> create a pod that uses the configmap data
+Now create a pod that uses the configmap data called `player_configmap_pod.yaml` 
+> Note: This pod definition references data values defined in the previous configmap.
 
-cat pod_use_configmap.yaml
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -40,37 +44,37 @@ spec:
             configMapKeyRef:
               name: mygamedata      
               key: player_initial_gold
-      
 ```
 
 * create the pod with kubectl
-```
+
+```bash
 kubectl create -f pod_use_configmap.yaml
+kubectl get pod/configmap-game -o wide
 ```
-* log into the pod/container to verify if the variables are passed into:
+* log into the pod/container to verify if the variables have been passed into the containers.
 
 ```
 kubectl exec -it configmap-game sh
-
 echo $PLAYER_INIT_GOLD
-
 echo $PLAYER_INIT_LIVES
 ```
 
+## optional lab: create a secrets for use with a pod
 
-## optional lab: create a secrets and use it on a pod
+First create a secret
 
-> create a secrets
-```
-kubectl create secret generic mycredential --from-literal=username=alex --from-literal=password=abc123
+```bash
+kubectl create secret generic mycredential --from-literal=username=uwUberDevOp --from-literal=password=abc123
 ```
 * show and inspect the secrets
 ```
 kubectl get secrets mycredential
+kubectl describe secrets mycredential
 ```
-> create a pod that uses the secrets
 
-cat pod_usesecret_vol.yaml
+Create a new file called `pod_usesecret_vol.yaml` to create a pod that uses the secrets 
+
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -90,19 +94,25 @@ spec:
           secretName: mycredential
 ```
 
-* create the pod and login to the container
+Now create the pod and check the status
+
+```bash
+kubectl create -f pod_usesecret_vol.yaml
+kubectl get pod podwithsecretvolume -o wide
+kubectl describe pod podwithsecretvolume
 
 ```
-kubectl create -f pod_usesecret_vol.yaml 
+Finally login to the container and check the vol directory, you should see the username and password are sved as two files there.
+
+```bash
 kubectl exec -it podwithsecretvolume sh
-```
-* check the vol directory, you should see the username and password are sved as two files there.
-
-```
 cd /home/mykey
 cat username
 cat password
+exit
 ````
+
+> Question: Why did we not have to define a container when logging into the podwithsecretvolume container?
 
 
 
