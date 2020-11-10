@@ -19,13 +19,16 @@ spec:
         image: nginx
 ```
 * create the pod in k8s
-```
-kubectl create -f nginxwebpod.yaml
-```
-> expose the pod to external using NodePort
 
-* create a yaml file that defines the service
-nginxwebservice.yaml
+```bash
+kubectl create -f nginxwebpod.yaml
+kubectl get pod/nginxwebpod -o wide
+```
+
+> expose the pod to external clients using a NodePort
+
+* create a yaml file that defines the service called nginxwebservice.yaml
+
 ```yaml
 apiVersion: v1 
 kind: Service 
@@ -41,15 +44,25 @@ spec:
           targetPort: 80
 ```
 * create the service
-```
+
+```bash
 kubectl create -f nginxwebservice.yaml
 ```
+
 * check the service
 
-```
+```bash
 kubectl get svc
+kubectl get service -o wide
 ```
-the service should show the NodePort on the k8s nodes, try to access the service with your browser on your local laptop
+
+the service should show the NodePort on the k8s nodes, try to access the service from the command line and using the browser on your local laptop
+
+```bash
+export MYIP=`curl -s ifconfig.io`
+export MYPORT=`kubectl get service/nginxwebexternal -o yaml | grep nodePort | cut -d: -f2`
+curl http://$MYIP:MYPORT
+```
 
 http://k8snode-public-ip-address:nodeport 
 
