@@ -1,7 +1,7 @@
 ## Lab 16. Create a emptyDir volume for two containers in a pod
 ___
 
-This lab is to create a emptyDir volume and containers insie a pod can mount it to its local directory to share data with other containers in the same pod
+This lab will create a emptyDir volume in which both containers inside the pod can mount in their local directory and share data with other containers in the same pod.
 
 * create a yaml file that defines two containers, one emptydir volume and both containers mount the volume to its local directory
 
@@ -32,17 +32,28 @@ spec:
 ```
 
 * create the pod
-```
+
+```bash
 kubectl create -f pod_with_2containers_emptydir.yaml
+kubectl get pod/podwithvolumes -o wide
 ```
 
-* get into one container and create/modify files inside the /shareddir
-```
+* login to the busybox container and create a file inside the /shareddir folder.
+
+```bash
 kubectl exec -it podwithvolume -c busyboxcontainer sh
+cd /shareddir
+echo "I created this content in the busy container!" > data.txt
+cat data.txt
+exit
 ```
-add or remove files inside /shareddir
 
-* get into the shared directory on the other container and check if the files you created/modified showing up in the directory
-```
+* Now login to the redis container in your pod and confirm that the data.txt file just created is availble there too.
+
+```bash
 kubectl exec -it podwithvolume -c redis sh
+cd /shareddir
+ls
+cat data.txt
+exit
 ```
