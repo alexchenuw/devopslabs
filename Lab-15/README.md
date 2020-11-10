@@ -1,13 +1,14 @@
 ## Lab 15. Create a DaemonSet to run a fluentd pod on all k8s working nodes
 ___
 
-* create a yaml file run a fluentd pod on each k8s node (does not include the master node)
-fluentd-daemonset.yaml
+* create a yaml file to run a fluentd pod on each k8s node (does not include the master node) called `fluentd-daemonset.yaml`
+> Note: Change $USER to reflect your UW NetID
+
 ```yaml
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
-  name: achen-fluentd
+  name: $USER-fluentd
   namespace: kube-system
   labels:
     k8sapp: my-fluentd-logging
@@ -30,5 +31,5 @@ kubectl create -f fluentd-daemonset.yaml
 ```
 * check if a fluentd pod is running on each working node
 ```
-kubectl get node -n kube-system -o wide
+kubectl get pods -n kube-system -o wide
 ```
