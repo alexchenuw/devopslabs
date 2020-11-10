@@ -5,7 +5,7 @@ ___
 * create a new namespace on the cluster
 >Note: Replace $USER with your UW NetID.
 
-```basj
+```bash
 kubectl create namespace $USER
 ```
 _you can also create the namespace from a yaml file as the following, it will get you the same result_
@@ -34,18 +34,16 @@ kubectl get namespace
 
 >Note: Replace $USER with your UW NetID
 
-```
+```bash
 kubectl config set-context --current --namespace=$USER
 ```
 
 * verify you are on your namespace by creating a pod and display the pod
 ```
 kubectl get pod
-
 kubectl run mynewpod --image=nginx
-
 kubectl get pod
-
+kubectl get pod -o wide
 kubectl get pod --all-namespaces
 ```
 
