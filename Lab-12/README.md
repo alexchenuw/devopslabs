@@ -48,3 +48,5 @@ kubectl get pod --all-namespaces
 ```
 
 you should see the pod now resides in your default namespace now
+
+> Question: Where is your default namespace value stored?  hint check the configuration file under .kube
