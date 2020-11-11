@@ -64,7 +64,8 @@ kubectl get service nginxwebexternal
 curl http://{kubernetes node ip}:{kubernetes nodeport}
 ```
 
->Note: you will need to find a public k8s node IP address in the [Google web console](https://console.cloud.google.com)
+>Note: you will need to find a public k8s node IP address in the [Google web console](https://console.cloud.google.com)  
+
 http://k8snode-public-ip-address:nodeport 
 
 you should be able to access to the default nginx web page on your browser 
