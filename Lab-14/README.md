@@ -56,14 +56,15 @@ kubectl get svc
 kubectl get service -o wide
 ```
 
-the service should show the NodePort on the k8s nodes, try to access the service from the command line and using the browser on your local laptop
+The service should show the NodePort on the k8s nodes, try to access the service from the command line and using the browser on your local laptop.  You will need an IP address from one of the nodes and then you will need the kubernetes assigned node port.
 
 ```bash
-export MYIP=`curl -s ifconfig.io`
-export MYPORT=`kubectl get service/nginxwebexternal -o yaml | grep nodePort | cut -d: -f2`
-curl http://$MYIP:MYPORT
+kubectl get nodes -o wide
+kubectl get service nginxwebexternal
+curl http://{kubernetes node ip}:{kubernetes nodeport}
 ```
 
+>Note: you will need to find a public k8s node IP address in the [Google web console](https://console.cloud.google.com)
 http://k8snode-public-ip-address:nodeport 
 
 you should be able to access to the default nginx web page on your browser 
