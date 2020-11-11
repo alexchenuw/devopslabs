@@ -57,3 +57,4 @@ ls
 cat data.txt
 exit
 ```
+> Question: What will happen to the data if the pod is stopped or deleted?
