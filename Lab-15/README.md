@@ -1,7 +1,7 @@
 ## Lab 15. Create a DaemonSet to run a fluentd pod on all k8s working nodes
 ___
 
-* create a yaml file to run a fluentd pod on each k8s node (does not include the master node) called `fluentd-daemonset.yaml`
+* create a yaml file to run a fluentd pod on each k8s node (do not include the master node) called `fluentd-daemonset.yaml`
 > Note: Change $USER to reflect your UW NetID
 
 ```yaml
@@ -33,3 +33,5 @@ kubectl create -f fluentd-daemonset.yaml
 ```
 kubectl get pods -n kube-system -o wide
 ```
+
+> Question: Why do you see two instances of fluentd deployed to the kube-system namespace?
