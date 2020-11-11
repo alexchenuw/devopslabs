@@ -68,4 +68,4 @@ http://k8snode-public-ip-address:nodeport
 
 you should be able to access to the default nginx web page on your browser 
 
-> Question: If you have two nodes but have only deployed your pod to one node can you send request to the nodeport on either node and recieve the same results?
+> Question: If you have two nodes but have only deployed your pod to ONE node can you send a request to the nodeport on EITHER node and recieve the same results?
