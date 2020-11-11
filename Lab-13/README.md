@@ -49,3 +49,4 @@ kubectl describe po/nodeselectpod
 ```
 you should find your pod has been created and is running on k8snode2
 
+> Question: Can you assign two values to the same label?
