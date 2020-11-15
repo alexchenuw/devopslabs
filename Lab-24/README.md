@@ -1,2 +1,2 @@
-## Lab 24. Set up HPA on a k8s cluster
+## Lab 24. Config HPA on a k8s cluster
 ___
