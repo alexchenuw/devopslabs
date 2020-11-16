@@ -23,33 +23,33 @@ spec:
       image: fluentd
 ```
 
-* find the static pod folder location
+* Find the static pod folder location
 
-on the target node (could be master, node1 or node2 of your choice), ssh into the node then,
+On the target node of your choice (could be master, node1 or node2 of your choice), ssh into the node then,
 ```
 sudo systemctl status kubelet |grep config
 ```
-you should be able to get the --config file is /var/lib/kubelet/config.yaml.
+You should be able to get the --config file is /var/lib/kubelet/config.yaml.
 
-look into the file and find the line that defines staticpod, something like:
+Look into the file /var/lib/kubelet/config.yaml and locate the line that defines staticpod, something like:
 
 ```
 staticPodPath: /etc/kubernetes/manifests
 ```
-that is the folder for the static pod.
+that means /etc/kubernetes/manifests is the folder for the static pod.
 
-* copy your defined yaml file into the folder
+* Copy your defined yaml file into the folder
 
 ```
 sudo cp static_logging_pod.yaml /etc/kubernetes/manifests/static_logging_pod.yaml
 ```
-restart the kubelet service and check if the pod is already running on the node
+Restart the kubelet service and check if the pod is now running on the node
 
 ```
 sudo systemctl restart kubelet
 kubectl get pod
 ```
-try to delete the pod and see what happens:
+Try to delete the pod and see what happens:
 
 ```
 kubectl delete pod static-logging-xxx
