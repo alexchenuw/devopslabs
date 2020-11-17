@@ -6,7 +6,8 @@ ___
 _Have the init container perform an operation, until the return is successful, continue to create the other containers in the same pod.
 the init container will first download a webpage from a repository and place it at a shared dir, once it completes that, the web server container will be spun up._
 
-cat lab_init_container.yaml
+Create a file called `lab_init_container.yaml` with the following content.
+
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -38,8 +39,10 @@ spec:
     emptyDir: {}
 ``` 
 
-* use kubectl describe the pod and check the deploying events, it should show the events in order.
-```
+* create the new pod and use kubectl describe the details and check the deploying events, it should show the events in order.
+
+```bash
+kubectl create -f lab_init_container.yaml
 kubectl describe pod init-demo
 ```
 
@@ -56,7 +59,8 @@ kubectl get svc
 
 * create a liveness container in a pod 
 
-cat liveness_container.yaml
+create a file called `liveness_container.yaml`
+
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -79,18 +83,22 @@ spec:
         - /tmp/healthy
       initialDelaySeconds: 5
       periodSeconds: 5
-      
 ```
+
 * create the pod
-```
+
+```bash
 kubectl create -f liveness_container.yaml
 ```
 * check the deploy events with the pod multiple times
-```
+
+```bash
 kubectl describe pod liveness-exec
 ```
+
 * show the pod and check how many times it has been restarted
-```
+
+```bash
 kubectl get pod liveness-exec
 ```
 
