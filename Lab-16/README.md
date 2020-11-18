@@ -41,7 +41,7 @@ kubectl get pod/podwithvolumes -o wide
 * login to the busybox container and create a file inside the /shareddir folder.
 
 ```bash
-kubectl exec -it podwithvolume -c busyboxcontainer sh
+kubectl exec -it podwithvolumes -c busyboxcontainer sh
 cd /shareddir
 echo "I created this content in the busy container!" > data.txt
 cat data.txt
@@ -51,7 +51,7 @@ exit
 * Now login to the redis container in your pod and confirm that the data.txt file just created is availble there too.
 
 ```bash
-kubectl exec -it podwithvolume -c redis sh
+kubectl exec -it podwithvolumes -c redis sh
 cd /shareddir
 ls
 cat data.txt
