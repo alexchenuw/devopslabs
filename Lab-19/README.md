@@ -34,14 +34,14 @@ spec:
 
 ```bash
 kubectl create -f lab19_deployment.yaml
-kubectl get deployment ${USER}nwebdemo
+kubectl get deployment ${USER}webdemo
 ```
 
 * show the replicaset 
 
 ```bash
 kubectl get replicaset 
-kubectl describe replicaset ${USER}:webdemo
+kubectl describe replicaset ${USER}webdemo
 ```
 * show the pods created by this deployment
 
