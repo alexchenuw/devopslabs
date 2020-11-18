@@ -41,7 +41,7 @@ kubectl get deployment ${USER}nwebdemo
 
 ```bash
 kubectl get replicaset 
-kubectl describe replicaset achenwebdemo
+kubectl describe replicaset ${USER}:webdemo
 ```
 * show the pods created by this deployment
 
