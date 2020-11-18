@@ -4,13 +4,13 @@ ___
 _With Lab 19, we will be creating a deployment and then expose the deployment as a service for external users as NodePort, this will be a very typical application deployment scenario_
 _we will also experience how a replicaset plays its role to maintain a desired number of pods_
 
-> create a deployment file called `lab19_deployment.yaml`
+> create a deployment file called `lab19_deployment.yaml` replace ${USER} with your userID
 
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: achenwebdemo
+  name: ${USER}webdemo
   labels:
     app: webnginx
 spec:
@@ -34,7 +34,7 @@ spec:
 
 ```bash
 kubectl create -f lab19_deployment.yaml
-kubectl get deployment achenwebdemo
+kubectl get deployment ${USER}nwebdemo
 ```
 
 * show the replicaset 
