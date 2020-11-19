@@ -1,4 +1,4 @@
-Lab 25. install NGINX ingress controller to your k8s cluster
+### Lab 25. install NGINX ingress controller to your k8s cluster
 ___
 
 locate the installation guide at https://kubernetes.github.io/ingress-nginx/deploy/
