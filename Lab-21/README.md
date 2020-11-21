@@ -1,6 +1,6 @@
 ## Lab 21. Install a k8s cluster with 3 nodes
 ___
-> Provision the VM environment
+> ### Provision the VM environment by creating 3 VMs
 1. Create 3 vm instances as describle in lab 1
 use k8smaster-netid as the VM names, follow the format like k8smaster-chenalex, k8snode1-chenalex and k8snode2-chenalex 
 2. Install docker engine on all three instances as describle in lab 2
@@ -12,7 +12,7 @@ sudo apt-get install docker.io -y
 ```
 sudo systemctl enable docker
 ```
-> Install k8s components to all three instances
+> ### Install k8s components to all three instances
 4. add the sign key
  ```
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add
@@ -78,7 +78,7 @@ sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Do
 kubectl get pod --all-namespaces
 ```
 
->  # now run the following command on each of the two node VM:
+>  ### now run the following command on each of the two node VM:
 
 15. paste in the message copied earlier from step 11:
 ```
