@@ -78,7 +78,7 @@ sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Do
 kubectl get pod --all-namespaces
 ```
 
->  ## now run the following command on each of the two node VM:
+>  # now run the following command on each of the two node VM:
 
 15. paste in the message copied earlier from step 11:
 ```
