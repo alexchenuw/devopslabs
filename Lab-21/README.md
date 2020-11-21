@@ -51,15 +51,16 @@ sudo vi /etc/hosts
 10.1xx.0.7    k8snode2-chenalex
 ```
 
-> ### 10. now on the master node:
+> ### Now on the master node:
+10. Initial the cluster setup by running
 
 ```
 sudo kubeadm init --pod-network-cidr=10.244.0.0/16
 ```
 
-11. copy the last log showing something like "kubeadm join 10.168.0.4..." to the end of the message 
+11. copy the last log showing something like "kubeadm join 10.168.0.4..." to the end of the message, we will use this message later
 
-12. create the k8s cluster directory
+12. create the k8s kubectl directory
 ```
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
