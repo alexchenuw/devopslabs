@@ -78,20 +78,21 @@ sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Do
 kubectl get pod --all-namespaces
 ```
 
-> now run the following command on each of the two node VM:
+>  ## now run the following command on each of the two node VM:
 
-15. paste in the copied message:
+15. paste in the message copied earlier from step 11:
 ```
 sudo kubeadm join 10.168.0.4:6443 --token v7ylqj --discovery-token-ca-cert-hash sha256:3f5b65334.cde43
 ```
 
 
-16. on master node, show the cluster
+16. Get back to the master node, show the cluster
 ```
 kubectl get node
 ```
 
 17. set the kubectl on your workstation VM to point to the cluster created here
+    ## Still remember how to do this? refer to lab 9, last two steps
 
 
 
