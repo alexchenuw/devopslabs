@@ -51,7 +51,7 @@ sudo vi /etc/hosts
 10.1xx.0.7    k8snode2-chenalex
 ```
 
-10. now on the master node:
+> ### 10. now on the master node:
 
 ```
 sudo kubeadm init --pod-network-cidr=10.244.0.0/16
@@ -78,7 +78,7 @@ sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Do
 kubectl get pod --all-namespaces
 ```
 
->  ### now run the following command on each of the two node VM:
+>  ### now run the following command on each of the two node VMs:
 
 15. paste in the message copied earlier from step 11:
 ```
