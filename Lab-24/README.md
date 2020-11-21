@@ -1,7 +1,7 @@
 ### Lab 24. Install NGINX ingress controller to your k8s cluster and expose an Ingress service
 ___
 
-> Install NGINX ingress controller to your cluster
+> ### Install NGINX ingress controller to your cluster
 
 There are two maintained version of NGINX ingress controllers, one is maintained by k8s and the other is by NGINX, we will use the k8s version at this lab,
 
@@ -45,7 +45,7 @@ ingress-nginx-controller-cf9756865-c8gx7   1/1     Running     0          47h
 
 The above pods and their status indicate the ingress controller has been installed properly.
 
-> create an ingress service
+> ### now define an ingress service
 
 * Find the service you want to expose using Ingress
 
@@ -57,19 +57,23 @@ kubectl get svc
 cat ingress_example.yaml
 
 ```yaml
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ingress-example
+  name: myfirst-ingress
 spec:
   rules:
-    - host: www.ingress123.com 
-      http:
-        paths:
-          - path: /
-            backend:
-              serviceName: mywebservice 
-              servicePort: 80
+  - host: yournet-id.alexchen.me
+    http:
+      paths:
+      - path: /
+        pathType: Prefix        
+        backend:
+          service:
+            name: lab19external
+            port:
+              number: 80
+
 ```
 
 * Display the Ingress detail info
@@ -86,27 +90,33 @@ Now, try access the FQDN from your browser
 * now add a second service to the same Ingress
 cat ingress_example.yaml
 ```yaml
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ingress-example
+  name: myfirst-ingress
 spec:
   rules:
-    - host: www.ingress123.com 
-      http:
-        paths:
-          - path: /
-            backend:
-              serviceName: mywebservice 
-              servicePort: 80
-    
-    - host: www.anotherweb.com 
-      http:
-        paths:
-          - path: /
-            backend:
-              serviceName: nginxingress 
-              servicePort: 8090
+  - host: younetid.alexchen.me
+    http:
+      paths:
+      - path: /
+        pathType: Prefix        
+        backend:
+          service:
+            name: lab19external
+            port:
+              number: 80
+  - host: mynetid.alexchen.me
+    http:
+      paths:
+      - path: /
+        pathType: Prefix        
+        backend:
+          service:
+            name: secondservice
+            port:
+              number: 80
+
 ```
 * make the update to the ingress then display it:
 
