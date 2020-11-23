@@ -47,7 +47,13 @@ spec:
           port: 80 
           targetPort: 80
 ```
+* show the service created by the yaml
+```
+kubectl get svc
+```
+_do you realize there is a new service type LoadBalancer and a new IP is assigned to it?_
 
-* 3 find the defined service and access from external (laptop)
+*  find the defined service and access from external (laptop)
 
+access the IP address from your laptop browser http://loadbalanceripaddress
 
