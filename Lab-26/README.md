@@ -1,4 +1,4 @@
-## Lab 26. Create a k8s cluster in GKE and deploy an application to it
+## Lab 26. Create a k8s cluster in GKE and deploy an application into the cluster
 ___
 
 *  Follow the instruction to create a k8s cluster
