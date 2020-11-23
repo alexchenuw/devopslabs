@@ -18,7 +18,7 @@ kubectl get replicaset
 
 > scale out/in number of pods for the deployment
 
-* scale the deployment with 10 pods from 4 pods
+* scale the deployment to 10 pods from 4 pods
 
 ```
 kubectl scale deployment achenwebdemo --replicas=10
