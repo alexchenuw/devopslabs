@@ -30,3 +30,5 @@ ssh -L 8001:127.0.0.1:8001 public-ip-of-your-vm
  
 * Paste the token from earlier step and get authenticated
 
+![dashboard](https://github.com/alexchenuw/devopslabs/blob/main/Lab-25/k8sdashboard.png)
+
