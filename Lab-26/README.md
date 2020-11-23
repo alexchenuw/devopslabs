@@ -1,9 +1,9 @@
 ## Lab 26. Create a k8s cluster in GKE and deploy an application to it
 ___
 
-* 1. follow the instruction to create a k8s cluster
+*  1 follow the instruction to create a k8s cluster
 
-* 2. get on to gcloud Cli console 
+*  2 get on to gcloud Cli console 
 
 > deploy the application into the cluster
 
@@ -45,6 +45,6 @@ spec:
           targetPort: 80
 ```
 
-* find the defined service and access from external (laptop)
+* 3 find the defined service and access from external (laptop)
 
 
