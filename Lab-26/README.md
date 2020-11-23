@@ -1,9 +1,14 @@
 ## Lab 26. Create a k8s cluster in GKE and deploy an application to it
 ___
 
-*  1 follow the instruction to create a k8s cluster
+*  Follow the instruction to create a k8s cluster
 
-*  2 get on to gcloud Cli console 
+*  Get on to gcloud Cli console 
+
+```
+kubectl get pod --all-namespaces
+kubectl get node
+```
 
 > deploy the application into the cluster
 
@@ -11,7 +16,7 @@ ___
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: achenwebdemo
+  name: gkewebdemo
   labels:
     app: webnginx
 spec:
@@ -27,9 +32,7 @@ spec:
       containers:
       - name: nginx
         image: nginx:1.18.0
-      - name: redis
-        image: redis
-        
+              
 ---
 apiVersion: v1 
 kind: Service 
