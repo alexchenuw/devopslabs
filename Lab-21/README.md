@@ -1,7 +1,7 @@
 ## Lab 21. Install a k8s cluster with 3 nodes
 ___
 > ### Provision the VM environment by creating 3 VMs
-1. Create 3 vm instances as describle in lab 1
+1. Create 3 vm instances as describle in [lab 1](https://github.com/alexchenuw/devopslabs/tree/main/Lab-1)
 use k8smaster-netid as the VM names, follow the format like k8smaster-chenalex, k8snode1-chenalex and k8snode2-chenalex 
 2. Install docker engine on all three instances as describle in lab 2
 ```
