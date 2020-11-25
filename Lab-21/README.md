@@ -4,6 +4,7 @@ ___
 
 1. Create 3 vm instances as describle in [lab 1](https://github.com/alexchenuw/devopslabs/tree/main/Lab-1)
 use k8smaster-netid as the VM names, follow the format like k8smaster-chenalex, k8snode1-chenalex and k8snode2-chenalex
+> Note: Once you create the first image, click on this instance to display the details and consider using the "Create Similar" function to duplicate your instance two more times.
 
 2. Install docker engine on all three instances as describle in lab 2
 
