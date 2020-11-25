@@ -39,10 +39,11 @@ sudo apt-get update -y
 sudo apt-get install kubeadm kubelet kubectl -y
 ```
 
-7. turn swap off (k8s won't start with swap on)
+7. turn swap off (k8s won't start with swap on).  Use `free -h` to confirm swap is disabled or turned off.
 
 ```bash
 sudo swapoff -a
+free -h
 ```
 
 8. set hostnames on three instances according to their roles
