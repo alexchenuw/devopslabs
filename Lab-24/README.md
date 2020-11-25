@@ -53,9 +53,7 @@ The above pods and their status indicate the ingress controller has been install
 ```
 kubectl get svc
 ```
-* Define an Ingress to expose a service named mywebservice
-
-cat ingress_example.yaml
+* Create an Ingress yaml file called `ingress_example.yaml` based on the configuration example provided below.  This should expose a service named myfirst-ingress
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -74,13 +72,14 @@ spec:
             name: lab19external
             port:
               number: 80
-
 ```
 
-* Display the Ingress detail info
+* Now create and display Ingress details.
 
-```
+```bash
+kubectl create -f ingress_example.yaml
 kubectl get ingress
+kubectl describe ingress
 ```
 
 * Make changes on DNS setting to map the FQDN to the ingress IP address
