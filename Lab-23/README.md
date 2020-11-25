@@ -10,7 +10,6 @@ The three key steps are:
   
 * Create a yaml file called `static_logging_pod.yaml` defining the pod
 
-static_logging_pod.yaml
 ```yaml
 apiVersion: v1
 kind: Pod
