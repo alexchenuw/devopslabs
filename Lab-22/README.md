@@ -3,11 +3,11 @@ ___
 
 > Step 1, deploy the application to your cluster
 
-* Follow the instruction from Lab 19 to deploy an application to your k8s cluster you just built. remember the AlienInvasion game application you build and published to your dockerhub repository, that is the image this lab will use as the application
+* Follow the instructions from [Lab 19](https://github.com/alexchenuw/devopslabs/tree/main/Lab-19) to deploy an application to your k8s cluster you just built. Do you remember the [AlienInvasion game](https://github.com/alexchenuw/devopslabs/tree/main/Lab-8) you built and published to your dockerhub repository? that is the image this lab will use as the application
 
 one tip:
 
-```
+```bash
 replace the container image with the one you created and uploaded to Dockerhub. an example will be:
 
 image: alexchen2015/alex001:mypersonalnginx
