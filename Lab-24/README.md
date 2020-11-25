@@ -8,8 +8,9 @@ There are two maintained version of NGINX ingress controllers, one is maintained
 * Locate the installation guide at https://kubernetes.github.io/ingress-nginx/deploy/, since we are installing on our baremetal cluster therefore:
 https://kubernetes.github.io/ingress-nginx/deploy/#bare-metal
 
-* we need make changes on the deployment yaml file so we download the deployment file first:
-```
+* we will need to make changes in the deployment yaml file, so using wget copy the nginx deploy.yaml file locally first.
+
+```bash
 wget https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.41.2/deploy/static/provider/baremetal/deploy.yaml
 ```
 
