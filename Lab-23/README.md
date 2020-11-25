@@ -8,9 +8,9 @@ The three key steps are:
   2. find the static pod folder location
   3. copy the pod yaml file into the folder
   
-* Create a yaml file defining the pod
+* Create a yaml file called `static_logging_pod.yaml` defining the pod
 
-cat static_logging_pod.yaml
+static_logging_pod.yaml
 ```yaml
 apiVersion: v1
 kind: Pod
