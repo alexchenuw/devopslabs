@@ -25,18 +25,20 @@ spec:
 
 * Find the static pod folder location
 
-On the target node of your choice (could be master, node1 or node2 of your choice), ssh into the node then,
-```
+The static pod will run on the node where you create the static pod yaml file.  This could be your master or any of workder nodes.  Now login to the node where you want to install this static pod.  Once you have logged into your target host we need to locate the kubectl config.yaml file.  The output from the following command should point to this file.  
+
+```bash
 sudo systemctl status kubelet |grep config
 ```
-You should be able to get the --config file is /var/lib/kubelet/config.yaml.
+> If you are struggling to find the file look for `--config` and something similar to `/var/lib/kubelet/config.yaml`.
 
-Look into the file /var/lib/kubelet/config.yaml and locate the line that defines staticpod, something like:
+Now open this file and search for the line that maps the `staticPodPath` to a diretory.  It probably looks similar to the example show below.
 
-```
+```shell
 staticPodPath: /etc/kubernetes/manifests
 ```
-that means /etc/kubernetes/manifests is the folder for the static pod.
+
+This directory is where we will copy our `static_logging_pod.yaml` file, you may also notice some other yaml files if you are doing this on your master node.  
 
 * Copy your defined yaml file into the folder
 
