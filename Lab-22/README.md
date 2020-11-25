@@ -15,5 +15,5 @@ image: alexchen2015/alex001:mypersonalnginx
 ```
 > Step 2, scale the application to larger capacity
 
-* follow what you did in Lab 19 to scale the application, expose it as an external facing app and play the game from your browser on your laptop.
+* follow the steps from Lab 19 to scale the application, expose it as an externally facing app and play the game from your browser on your laptop.
 
