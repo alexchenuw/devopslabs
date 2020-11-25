@@ -1,8 +1,9 @@
 ## Lab 23. Deploy a static pod to the k8s cluster
 ___
 
-_At this lab, we will learn how to deploy a pod into k8s cluster node so that it will always be running as a system service_
-Three key steps
+_At this lab, we will learn how to deploy a pod into k8s cluster node so that it will always be running as a system service_  
+
+The three key steps are:
   1. create a yaml file defining your pod
   2. find the static pod folder location
   3. copy the pod yaml file into the folder
