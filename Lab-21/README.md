@@ -74,10 +74,10 @@ sudo vi /etc/hosts
 10. Initial the cluster setup by running
 
 ```bash
-sudo kubeadm init --pod-network-cidr=10.244.0.0/16
+sudo kubeadm init --pod-network-cidr=10.244.0.0/16 | tee kube-init.out
 ```
 
-11. copy the last log showing something like "kubeadm join 10.168.0.4..." to the end of the message, we will use this message later
+11. copy the last log showing something like "kubeadm join 10.168.0.4..." to the end of the message, we will use this message later.  
 
 12. create the k8s kubectl directory
 
