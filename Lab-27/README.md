@@ -1,6 +1,7 @@
 ## Lab 27. Prep lab for lab 28
 ___
-> This lab include 4 mini labs and they are the build blocks for lab 28, everyone should be able to finish these 4 mini labs as these are labs we did earlier.
+> This lab include 4 mini labs and they are the build blocks for lab 28, everyone should be able to finish these 4 mini labs as these are labs we did earlier. this lab will manually get all these steps done and in our next lab, we will use a tool to stitch them together and they can be run automatically.
+
 
 * >lab 27-1: Create a Dockfile to build a nginx image with a customized index.html
 start with a new folder on your VM
