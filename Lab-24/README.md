@@ -88,6 +88,7 @@ kubectl describe ingress
 Now, try access the FQDN from your browser
 
 
+___
 * now add a second service to the same Ingress
 cat ingress_example.yaml
 ```yaml
@@ -128,7 +129,5 @@ kubectl apply -f ingress_example.yaml
 kubectl get ingress
 ```
 
-* now tell Instructor Alex the ip address to add the DNS resource record
-
-* access both FQDN from your browser 
+*  access both FQDN from your browser 
 
