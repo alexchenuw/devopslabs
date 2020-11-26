@@ -17,7 +17,7 @@ FROM nginx
 COPY index.html /usr/share/nginx/html
 ```
 
-* lab 27-2: Build your nginx image with the Dockerfile and push to dockerhub.com
+* >lab 27-2: Build your nginx image with the Dockerfile and push to dockerhub.com
 
 ```
 docker build . -t your_dockerhub_repository:1.0.0
@@ -33,14 +33,14 @@ push the image to your dockerhub repository
 docker push your_dockerhub_repository:1.0.0
 ```
 
-* lab 27-3: create a github repository and publish your application 1.0.0 to it
+* >lab 27-3: create a github repository and publish your application 1.0.0 to it
 
 Create a new repository at your github account
 Conduct git init in your current folder that has Dockerfile and index.html
 Push the these two files to github repository as
 
 
-* lab 27-4: create a deployment that uses your docker image at dockerhub
+* >lab 27-4: create a deployment that uses your docker image at dockerhub
 
 cat deployment_lab27_4.yaml
 ```
