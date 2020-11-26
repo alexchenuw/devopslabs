@@ -126,8 +126,9 @@ kubectl apply -f ingress_example.yaml
 ```
 kubectl get ingress
 ```
+![ingress controller](https://github.com/alexchenuw/devopslabs/blob/main/Lab-24/ingress-lab24.png)
 
-* add the DNS record to map the second FQDN to the ingress on your laptop
+* now tell Instructor Alex the ip address to add the DNS resource record
 
 * access both FQDN from your browser 
 
