@@ -3,7 +3,7 @@ ___
 
 *  Follow the instruction to create a k8s cluster
 
-*  Get on to gcloud Cli console 
+*  Get on to gcloud cli console 
 
 ```
 kubectl get pod --all-namespaces
@@ -11,6 +11,7 @@ kubectl get node
 ```
 
 > deploy the application into the cluster
+cat sample_deployment.yaml
 
 ```yaml
 apiVersion: apps/v1
