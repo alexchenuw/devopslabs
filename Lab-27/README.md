@@ -36,7 +36,9 @@ docker push your_dockerhub_repository:1.0.0
 * >lab 27-3: create a github repository and publish your application 1.0.0 to it
 
 Create a new repository at your github account
+
 Conduct git init in your current folder that has Dockerfile and index.html
+
 Push the these two files to github repository as
 
 
@@ -80,6 +82,18 @@ spec:
           
 ```
 
+now, create the deployment and access the application from your laptop
+
+```
+kubectl create -f deployment_lab27_4.yaml
+```
+find the nodeport service port
+```
+kubectl get svc
+```
+access your app from external (for example your laptop) via your browser:
+
+http://the-node-public-ip:nodeport
 
 
 
