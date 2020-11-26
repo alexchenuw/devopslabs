@@ -2,7 +2,7 @@
 ___
 > This lab include 4 mini labs and they are the build blocks for lab 28, everyone should be able to finish these 4 mini labs as these are labs we did earlier.
 
-* lab 27-1: Create a Dockfile to build a nginx image with a customized index.html
+* >lab 27-1: Create a Dockfile to build a nginx image with a customized index.html
 start with a new folder on your VM
 ```
 mkdir lab_27 && cd lab_27
