@@ -12,15 +12,44 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0/a
 ```
 
 * create a service account and a cluster role to get the token
+cat create_user_token.yaml
+```yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: admin-user
+  namespace: kubernetes-dashboard
+  
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: admin-user
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+- kind: ServiceAccount
+  name: admin-user
+  namespace: kubernetes-dashboard
+```
+get the token from the user:
+```
+kubectl create -f create_user_token.yaml
+```
+get the token:
 
-https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/creating-sample-user.md
+```
+kubectl -n kubernetes-dashboard describe secret admin-user
+```
 
 * start the dashboard with
 ```
 kubectl proxy
 ```
-
-* since the proxy is at the VM you are running and you want to access from your local laptop, you need a SSL forward
+## on your laptop:
+* since the proxy is at the VM you are running and you want to access from your local laptop, you need run a SSL forward on your laptop:
 ```
 ssh -L 8001:127.0.0.1:8001 public-ip-of-your-vm
 ```
