@@ -1,4 +1,4 @@
-## Lab 25. Install UI dashboard for k8s cluster
+## Lab 25. Install UI dashboard for k8s cluster (optional)
 ___
 
 _This lab will be designated as a homework_
