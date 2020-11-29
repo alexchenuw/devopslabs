@@ -114,13 +114,6 @@ kubectl get node
 17. set the kubectl on your workstation VM to point to the cluster created here
     ## Still remember how to do this? refer to lab 9, last two steps
 
->Note: to enable kubectl shell auto complete run the following commands to update your current shell and to automate this setting for later ssh sessions.
 
-```bash
-source <(kubectl completion bash)
-echo 'source <(kubectl completion bash)' >>~/.bashrc
-```
-
->Question: How many pod networks can you have per Kubernetes cluster?
 
 
