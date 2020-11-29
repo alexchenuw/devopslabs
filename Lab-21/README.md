@@ -70,7 +70,7 @@ sudo vi /etc/hosts
 10.1xx.0.7    k8snode2-chenalex
 ```
 
-> ### Now on the master node (and master node ONLY):
+> ### Now run step 10-14 on the master node (and master node ONLY):
 10. Initial the cluster setup by running
 
 ```bash
@@ -98,13 +98,13 @@ sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Do
 ```
 kubectl get pod --all-namespaces
 ```
-> ### now run the following command on each of the two node VMs (and ONLY on node VMs) 
+> ### now run step 15 on each of the two node VMs (and ONLY on node VMs) 
 
 15. paste in the message copied earlier from step 11:
 ```
 sudo kubeadm join 10.168.0.4:6443 --token v7ylqj --discovery-token-ca-cert-hash sha256:3f5b65334.cde43
 ```
-
+> ### the cluster has been installed, go back to the master node to run kubectl to check the status:
 16. Get back to the master node, show the cluster
 
 ```bash
