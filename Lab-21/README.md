@@ -70,7 +70,7 @@ sudo vi /etc/hosts
 10.1xx.0.7    k8snode2-chenalex
 ```
 
-> ### Now on the master node:
+> ### Now on the master node (and master node ONLY):
 10. Initial the cluster setup by running
 
 ```bash
@@ -98,7 +98,7 @@ sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Do
 ```
 kubectl get pod --all-namespaces
 ```
-now run the following command on each of the two node VMs <span style="color:red"> ONLY </span>
+> ### now run the following command on each of the two node VMs (and ONLY on node VMs) 
 
 15. paste in the message copied earlier from step 11:
 ```
