@@ -20,16 +20,18 @@ FROM nginx:latest
 COPY ./index.html /usr/share/nginx/html/index.html
 ```
 
-* next we are going to create a simple html file for our image, build the image and tag the image.
+* next we are going to create a simple html file for our image, build the image and tag the image.  Then we will an instance of our image and call it web1.
 ```bash
 echo "This is my sample nginx web container" > index.html
-docker built . -t static-site
-docker images
+docker build . -t static-site
+docker images | grep static-site
 docker run -d -p 8080:80 --name web1 static-site
 curl localhost:8080
 docker tag static-site:latest static-site:v0.0.1
 docker images
 ```
+
+![Docker Hub](https://github.com/alexchenuw/devopslabs/blob/main/Lab-4/docker-tag.png)
 
 * Next we are going to tag our custom image with with our docker repository userid and version details. In this example replace **D_USER** with your Docker UserID and **D_REPO** with your Docker Repository name.  Notice the Docker image ID values do you see any difference in the values provided between latest, v0.0.1 and your Docker hub tagged image?
 
