@@ -28,7 +28,7 @@ docker images | grep static-site
 docker run -d -p 8080:80 --name web1 static-site
 curl localhost:8080
 docker tag static-site:latest static-site:v0.0.1
-docker images
+docker images | grep static-site
 ```
 
 ![Docker Hub](https://github.com/alexchenuw/devopslabs/blob/main/Lab-4/docker-tag.png)
