@@ -20,7 +20,8 @@ FROM nginx:latest
 COPY ./index.html /usr/share/nginx/html/index.html
 ```
 
-* next we are going to create a simple html file for our image, build the image and tag the image.  Then we will an instance of our image and call it web1.
+* next we are going to create a simple html file for our image, build the image and tag the image.  Then we will create an instance of our image and call it **web1**. Finally we will get a quick look at the logs for our new docker container instance.
+
 ```bash
 echo "This is my sample nginx web container" > index.html
 docker build . -t static-site
@@ -29,6 +30,8 @@ docker run -d -p 8080:80 --name web1 static-site
 curl localhost:8080
 docker tag static-site:latest static-site:v0.0.1
 docker images | grep static-site
+docker inspect web1
+docker container logs web1
 ```
 
 ![Docker Hub](https://github.com/alexchenuw/devopslabs/blob/main/Lab-4/docker-tag.png)
