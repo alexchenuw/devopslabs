@@ -13,23 +13,35 @@ This lab includes two parts, part one is to create a dockerhub account and repos
 
 > Part two: build and push a customized image to dockerhub repository
 
-* use docker commit command to build a customized docker image
-```bash
-docker tag image-id
+* Now we are going to create a simple nginx based image using the following **Dockerfile**
+
+```shell
+FROM nginx:latest
+COPY ./index.html /usr/share/nginx/html/index.html
 ```
 
-* tag the image with required username/repository format
+* next we are going to create a simple html file for our image, build the image and tag the image.
 ```bash
-docker tag image-id username/repository:tag
+echo "This is my sample nginx web container" > index.html
+docker built . -t static-site
+docker images
+docker run -d -p 8080:80 --name web1 static-site
+curl localhost:8080
+docker tag static-site:latest static-site:v0.0.1
+docker images
 ```
 
-* docker login with registered credentials 
+* Next we are going to tag our custom image with with our docker repository userid and version details. In this example replace **D_USER** with your Docker UserID and **D_REPO** with your Docker Repository name.  Notice the Docker image ID values do you see any difference in the values provided between latest, v0.0.1 and your Docker hub tagged image?
+
+```bash
+docker tag static-site:v0.0.1 D_USER/D_REPO:v0.0.1
+docker images
+```
+
+* Finally we want to push our new image to the dockerhub.  To do this we will need to login and then push the image.
+
 ```bash
 docker login
-```
-
-* push the customized image to dockerhub repository
-```bash
 docker push username/repository:tag
 ```
 
