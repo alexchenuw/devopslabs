@@ -29,6 +29,7 @@ kubectl get pod
 
 
 > ### upgrade/downgrade the nginx container image to the AienInvasion image you have created earlier, in my case it is alexchen2015/alex001:mypersonalnginx
+![lab 6 push image to dockerhub](https://github.com/alexchenuw/devopslabs/tree/main/Lab-6)
 
 * upgrade the nginx image in the deplpoyment to my version
 ```
