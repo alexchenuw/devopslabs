@@ -13,7 +13,7 @@ This lab includes two parts, part one is to create a dockerhub account and repos
 
 > Part two: build and push a customized image to dockerhub repository
 
-* Now we are going to create a simple nginx based image using the following **Dockerfile**
+* Now we are going to create a simple nginx based image using the following **Dockerfile**.  Login to your linux host and create a folder called lab4, in this folder we will create the Dockerfile and index.hmtl file.
 
 ```shell
 FROM nginx:latest
