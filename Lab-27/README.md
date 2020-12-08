@@ -38,15 +38,17 @@ docker push your_dockerhub_repository:1.0.0
 
 Create a new repository at your github account
 
-Conduct git init in your current folder that has Dockerfile and index.html
+Clone this repo to your current folder (lab_27) it should have the Dockerfile and index.html files.
 
-Push the these two files to github repository as
+Now, push the these two files to your new github repository.  
 
+> Note: See [lab 8](https://github.com/alexchenuw/devopslabs/tree/main/Lab-8) for additional tips
 
 * >lab 27-4: create a deployment that uses your docker image at dockerhub
 
 cat deployment_lab27_4.yaml
-```
+
+```shell
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -66,9 +68,7 @@ spec:
       containers:
       - name: nginx
         image: your_dockerhub_repository:1.0.0. <----modify this to your docker image name
-        imagePullPolicy: Always
-
-        
+        imagePullPolicy: Always 
 ---
 apiVersion: v1 
 kind: Service 
@@ -81,8 +81,7 @@ spec:
    ports: 
         - protocol: TCP 
           port: 80 
-          targetPort: 80
-          
+          targetPort: 80 
 ```
 
 now, create the deployment and access the application from your laptop
