@@ -25,6 +25,10 @@ Follow along lab
 
 ![cd-3](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab-28-ci-3.png)
 
+> Choose Build via shell command
+
+![cd-35](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab-28-ci-35.png)
+
 
 > Put in docker command and docker username password
 
