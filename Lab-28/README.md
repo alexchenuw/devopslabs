@@ -10,7 +10,7 @@ _This lab guide only covers the major steps/screencaptures for the lab, please d
 
 ![webhook](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28-1-webook.png)
 
-## * now logon to Jenkins: http://http://34.121.19.249:8080/
+## * now logon to Jenkins: http://34.121.19.249:8080/
 
 > 2. once logged in, create a freestyle job and name it with your netID, for example, achen-CI
 
