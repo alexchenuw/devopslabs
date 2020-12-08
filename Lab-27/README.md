@@ -66,6 +66,8 @@ spec:
       containers:
       - name: nginx
         image: your_dockerhub_repository:1.0.0. <----modify this to your docker image name
+        imagePullPolicy: Always
+
         
 ---
 apiVersion: v1 
