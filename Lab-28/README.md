@@ -5,7 +5,7 @@ Follow along lab
 
 ## * At github respository:
 
-> 1. Setup a github webhook for your github repository
+> 1. Setup a github webhook for your github repository that hosts the code you have for creating the new app
 
 ![webhook](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28-1-webook.png)
 
