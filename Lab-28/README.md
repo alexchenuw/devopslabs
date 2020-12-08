@@ -1,7 +1,8 @@
-## Lab 28. Building a simple CI and CD pipeline with Jenkins
+## Lab 28.  In-Class Lab: Building a simple CI and CD pipeline with Jenkins
 ___
 
-Follow along lab
+_This is an inclass lab where students will be following the instructor step by step to set up._
+_This lab guide only covers the major steps/screencaptures for the lab, please do follow with instructor on the detail instruction_
 
 ## * At github respository:
 
