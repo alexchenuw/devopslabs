@@ -16,7 +16,7 @@ Follow along lab
 ![cd-1](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28-ci-1.png)
 
 
-> Specify the git repository
+> Specify *your* git repository, the example shows mine but you need specify yours
 
 ![cd-2](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab-28-ci-2.png)
 
