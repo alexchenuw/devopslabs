@@ -52,7 +52,7 @@ This finishes the continunous Integration lab
 
 > 7. choose to configure the project and at the after build actions
 
-![cd-ssh](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab-28-cd-start.png)
+![cd-start](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab-28-cd-start.png)
 
 > 8. Setup the SSH plugin to login to kubernetes kubectl to rollout the deplpoyment with the new image
 
