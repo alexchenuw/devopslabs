@@ -30,10 +30,10 @@ This lab is to deploy a Ubuntu 16.04 LTS instance at Google Cloud and set up the
   ![Create a VM](https://github.com/alexchenuw/devopslabs/blob/main/Lab-1/lab1-1.png)
 
 * Specify the instance name as instance-1-yourNETID, change the boot Disk as Ubuntu 16.04 and the disk size to 100G
-  ![instance name and disk and key] (https://github.com/alexchenuw/devopslabs/blob/main/Lab-1/lab1-2.png)
+  ![instance name and disk and key](https://github.com/alexchenuw/devopslabs/blob/main/Lab-1/lab1-2.png)
   
-  ![disk to ubuntu] (https://github.com/alexchenuw/devopslabs/blob/main/Lab-1/lab1-3.png)
-  ![key] (https://github.com/alexchenuw/devopslabs/blob/main/Lab-1/lab1-4.png)
+  ![disk to ubuntu](https://github.com/alexchenuw/devopslabs/blob/main/Lab-1/lab1-3.png)
+  ![key](https://github.com/alexchenuw/devopslabs/blob/main/Lab-1/lab1-4.png)
 
 * At the main tab, under **Security** and **SSH Keys**, paste your ssh public key from part one to the box
 ![add ssh key](https://github.com/alexchenuw/devopslabs/blob/main/Lab-1/ssh-gcp-key.png)
