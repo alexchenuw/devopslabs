@@ -23,7 +23,7 @@ This lab is to deploy a Ubuntu 16.04 LTS instance at Google Cloud and set up the
 > Part 2: Deploy a Ubuntu 16.04 LTS instance at Google Cloud.
 
 
-* Log in with your UW email at https://cloud.google.com
+* Log in with your UW email at https://console.cloud.google.com
 
 * At the cloud console, top left, click navigation menu, compute engine -> VM instances, and Create instance"
 
