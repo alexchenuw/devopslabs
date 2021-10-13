@@ -8,7 +8,7 @@ This lab is to deploy a Ubuntu 16.04 LTS instance at Google Cloud and set up the
 * generate a ssh key pair on your local computer/laptop by running "sshkey-gen" under Windows Powershell or MacOS terminal
   
   ```
-  #sshkey-gen
+  #ssh-keygen
   ```
 > Note: if you want to create a key pair just for this course and your system username does not match your UW NetId then you may want to create a unique key pair. Replace "$NetID" with your UW NetID username.
 
