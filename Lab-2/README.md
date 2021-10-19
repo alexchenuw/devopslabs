@@ -40,9 +40,4 @@ docker version
 
 This should show the docker version if it has been successfully installed.
 ___
-To see the availalbe versions of docker to install use
-
-```bash
-sudo apt-cache madison docker.io
-```
 
