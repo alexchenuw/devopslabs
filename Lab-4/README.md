@@ -23,8 +23,6 @@ curl http://localhost:8989
 docker commit containerid
 ```
 
-![Docker Hub](https://github.com/alexchenuw/devopslabs/blob/main/Lab-4/docker-tag.png)
-
 * Next we are going to tag our custom image with with our docker repository userid and version details. In this example replace **D_USER** with your Docker UserID and **D_REPO** with your Docker Repository name.  Notice the Docker image ID values do you see any difference in the values provided between latest, v0.0.1 and your Docker hub tagged image?
 
 ```bash
