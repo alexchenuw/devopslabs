@@ -13,14 +13,23 @@ This lab includes two parts, part one is to create a dockerhub account and repos
 
 > Part two: build and push a customized image to dockerhub repository
 
-* next we are going to create a simple html file for our image, build the image and tag the image.  Then we will create an instance of our image and call it **web1**. Finally we will get a quick look at the logs for our new docker container instance.
+* next we are going to create a nginx container, then customize it with a simple html file, build out a docker image and tag it.  Then we will create an instance of our image. Finally we will push the image to dockerhub so that it can be shared to others.
 
 ```bash
-echo "This is my sample nginx web container" > index.html
 docker run -d -p 8989:80 nginx
+curl http://localhost:8989
+```
+** start customization
+```bash
+echo "This is my sample nginx web container" > index.html
 docker cp index.html containerid:/usr/share/nginx/html/index.html
 curl http://localhost:8989
 docker commit containerid
+```
+** try to create a new container using the image
+```bash
+docker run -d -p 9000:80 dockerimageid
+curl http://localhost:9000
 ```
 
 * Next we are going to tag our custom image with with our docker repository userid and version details. In this example replace **D_USER** with your Docker UserID and **D_REPO** with your Docker Repository name.  Notice the Docker image ID values do you see any difference in the values provided between latest, v0.0.1 and your Docker hub tagged image?
