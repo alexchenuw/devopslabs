@@ -45,7 +45,7 @@ docker build . -t myaliengame
 
 ```
 docker run -d -p 80:80 myaliengame
-curl ifconfig.io
+
 ```
 * bring up a chrome/firefox browser from your laptop and access to http://your-vm-public-ip and you should be able to see a game is up and running on your browser
 
