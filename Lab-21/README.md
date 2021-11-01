@@ -26,6 +26,15 @@ sudo vi /etc/docker/daemon.json
 sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
+2.3 verify docker cgroup driver is now systemd
+```bash
+sudo docker system info |grep -i driver
+
+WARNING: No swap limit support
+Storage Driver: overlay2
+Logging Driver: json-file
+Cgroup Driver: systemd
+```
 3. Make the system run docker automatically after reboot
 
 ```bash
