@@ -13,6 +13,7 @@ sudo apt-get update -y
 sudo apt-get install docker.io -y
 ```
 2.1 Change docker cgroup driver to systemD by creating a file as /etc/docker/daemon.json with the following content
+sudo vi /etc/docker/daemon.json
 ```bash
 {
   "exec-opts": ["native.cgroupdriver=systemd"]
