@@ -12,7 +12,17 @@ use k8smaster-netid as the VM names, follow the format like k8smaster-chenalex, 
 sudo apt-get update -y
 sudo apt-get install docker.io -y
 ```
-
+2.1 Change docker cgroup driver to systemD by creating a file as /etc/docker/daemon.json with the following content
+```bash
+{
+  "exec-opts": ["native.cgroupdriver=systemd"]
+}
+```
+2.2 restart system service and docker by
+```bash
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
 3. Make the system run docker automatically after reboot
 
 ```bash
