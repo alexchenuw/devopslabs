@@ -5,7 +5,7 @@ ____
 * Label a work node with label nodecpu-$USER=amd
 
 ```bash
-kubectl label node k8snode2 nodecpu-$USER=amd
+kubectl label node k8s-achen-node1 nodecpu-$USER=amd
 ```
 * show the labels on k8s nodes
 ```
@@ -15,7 +15,7 @@ kubectl get node --show-labels
 If you want to remove a label replace the label value with "-" as shown in this example.
 
 ```bash
-# kubectl label node k8snode2 nodecpu-$USER-
+# kubectl label node k8s-achen-node1 nodecpu-$USER-
 ```
 
 > Create a pod and have k8s schedule the pod to k8snode2 using nodeselector
