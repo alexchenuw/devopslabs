@@ -49,10 +49,10 @@ kubectl describe pod init-demo
 * we can also expose the pod service to find out what it is showing
 
 ```
-kubectl expose pod/init-demo --type=NodePort --port=80 --target-port=80
+kubectl expose pod/init-demo --type=NodePort --port=80xx --target-port=80
 kubectl get svc
 ```
-* open a browser on your local laptop and browse to http://node-public-ip:serviceportnumber, you should be able to get the webpage
+* open a browser on your local laptop and browse to http://node-public-ip:80xx, you should be able to get the webpage
 
 
 > ### Create a liveness container for a pod
