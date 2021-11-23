@@ -212,6 +212,7 @@ kubectl get ingress
 *  access FQDN from your browser 
 
 http://your-netid.alexchen.me
+
 http://your-netid.alexchen.me/apple
 
 
