@@ -114,7 +114,7 @@ kubectl create -f ingress_example.yaml
 kubectl get ingress
 kubectl describe ingress
 ```
-![ingress controller](https://github.com/alexchenuw/devopslabs/blob/main/Lab-24/ingress-lab24.png)
+![ingress controller](https://github.com/alexchenuw/devopslabs/blob/main/Lab-24/ingress-lab24-1.png)
 
 * Tell Instructor the ip address of your ingress and he will make changes on DNS setting to map the FQDN to the ingress IP address
 
