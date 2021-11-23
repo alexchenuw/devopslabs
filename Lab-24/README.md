@@ -49,7 +49,7 @@ ingress-nginx-admission-patch--1-b6tfm     0/1     Completed   0          11m   
 ingress-nginx-controller-75f465cc7-5882c   1/1     Running     0          11m   10.128.0.35   achen-node   <none>           <none>
 ```
 
-The above pods and their status indicate the ingress controller has been installed properly. You can also tell which node the ingress controller is running on.
+The above pods and their status indicate the ingress controller has been installed properly. You can also tell which node the ingress controller is running on. (also here please tell the instructor your ingress-controller ip as he will need to update the DNS record for your future usage, in this example, ingress controller ip is 10.128.0.35)
 
 > ### now define an ingress service
 
@@ -116,9 +116,8 @@ kubectl describe ingress
 ```
 ![ingress controller](https://github.com/alexchenuw/devopslabs/blob/main/Lab-24/ingress-lab24-1.png)
 
-* Tell Instructor the ip address of your ingress and he will make changes on DNS setting to map the FQDN to the ingress IP address
 
-Now, try access the FQDN from your browser
+Now, try access the FQDN from your browser, you should be able to see the default nginx webpage with your browser
 
 
 ___
