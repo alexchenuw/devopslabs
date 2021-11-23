@@ -53,7 +53,33 @@ The above pods and their status indicate the ingress controller has been install
 
 > ### now define an ingress service
 
-* Find the service you want to expose using Ingress
+* create a pod and expose it as a service
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginxwebpod
+  labels:
+    web: nginxweb 
+spec:
+  containers:
+    - name: nginxweb
+      image: nginx
+
+---
+apiVersion: v1 
+kind: Service 
+metadata: 
+    name: nginxwebservice 
+spec: 
+   selector: 
+     web: nginxweb 
+   type: NodePort
+   ports: 
+        - protocol: TCP 
+          port: 80 
+          targetPort: 80
 
 ```
 kubectl get svc
@@ -66,17 +92,19 @@ kind: Ingress
 metadata:
   name: myfirst-ingress
 spec:
+  ingressClassName: nginx
   rules:
-  - host: yournet-id.alexchen.me
+  - host: your-netid.alexchen.me
     http:
       paths:
       - path: /
-        pathType: Prefix        
+        pathType: Prefix
         backend:
           service:
-            name: lab19external
+            name: nginxwebservice
             port:
               number: 80
+
 ```
 
 * Now create and display Ingress details.
@@ -97,30 +125,81 @@ ___
 * now add a second service to the same Ingress
 cat ingress_example.yaml
 ```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginxwebpod
+  labels:
+    web: nginxweb 
+spec:
+  containers:
+    - name: nginxweb
+      image: nginx
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginxapple
+  labels:
+    web: nginxapple
+spec:
+      containers:
+      containers:
+        - name: apple-web
+          image: hashicorp/http-echo
+          args:
+            - "-text=apple"
+---
+apiVersion: v1 
+kind: Service 
+metadata: 
+    name: nginxwebservice 
+spec: 
+   selector: 
+     web: nginxweb 
+   type: NodePort
+   ports: 
+        - protocol: TCP 
+          port: 80 
+          targetPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+    name: nginxapplesvc
+spec:
+   selector:
+     web: nginxapple
+   type: NodePort
+   ports:
+        - protocol: TCP
+          port: 5678
+---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: myfirst-ingress
 spec:
+  ingressClassName: nginx
   rules:
-  - host: younetid.alexchen.me
+  - host: lab24.alexchen.me
     http:
       paths:
       - path: /
-        pathType: Prefix        
+        pathType: Prefix
         backend:
           service:
-            name: lab19external
+            name: nginxwebservice
             port:
               number: 80
-        - path: /orange
-        pathType: Prefix        
+      - path: /apple
+        pathType: Prefix
         backend:
           service:
-            name: secondservice
+            name: nginxapplesvc
             port:
-              number: 80
-
+              number: 5678
 ```
 * make the update to the ingress then display it:
 
@@ -131,5 +210,9 @@ kubectl apply -f ingress_example.yaml
 kubectl get ingress
 ```
 
-*  access both FQDN from your browser 
+*  access FQDN from your browser 
+
+http://your-netid.alexchen.me
+http://your-netid.alexchen.me/apple
+
 
