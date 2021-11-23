@@ -6,18 +6,21 @@ ___
 There are two maintained version of NGINX ingress controllers, one is maintained by k8s and the other is by NGINX, we will use the k8s version at this lab,
 
 * Locate the installation guide at https://kubernetes.github.io/ingress-nginx/deploy/, since we are installing on our baremetal cluster therefore:
-https://kubernetes.github.io/ingress-nginx/deploy/#bare-metal
+https://kubernetes.github.io/ingress-nginx/deploy/#bare-metal-clusters
 
 * we will need to make changes in the deployment yaml file, so using wget copy the nginx deploy.yaml file locally first.
 
 ```bash
-wget https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.41.2/deploy/static/provider/baremetal/deploy.yaml
+wget https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.0.5/deploy/static/provider/baremetal/deploy.yaml
 ```
 
-* Modify the deployment file to add a line of "hostNetwork: true" so that the NGINX pod can access to hostnetwork:
+* Modify the deployment definition to add a line of "hostNetwork: true" to the ingress controller so that the NGINX pod can access to hostnetwork:
+```bash
+vi deploy.yaml
+```
 
 ```yaml
- template:
+   template:
     metadata:
       labels:
         app.kubernetes.io/name: ingress-nginx
@@ -27,7 +30,9 @@ wget https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.41
       dnsPolicy: ClusterFirst
       hostNetwork: true
       containers:
-        - name: controller          
+        - name: controller
+          image: k8s.gcr.io/ingress-nginx/controller:v1.0.5@sha256:55a1fcda5b7657c372515fe402c3e39ad93aa59f6e4378e82acd99912fe6028d
+          imagePullPolicy: IfNotPresent   
 ``` 
 
 * Now install the NGINX ingress controller by applying the deployment yaml file:
@@ -37,14 +42,14 @@ kubectl create -f deploy.yaml
 * Verify if the ingress controller has been installed properly:
 
 ```
-kubectl get pod -n ingress-nginx
-NAME                                       READY   STATUS      RESTARTS   AGE
-ingress-nginx-admission-create-qgdfx       0/1     Completed   0          47h
-ingress-nginx-admission-patch-v7j9b        0/1     Completed   1          47h
-ingress-nginx-controller-cf9756865-c8gx7   1/1     Running     0          47h
+kubectl get pod -n ingress-nginx -o wide
+NAME                                       READY   STATUS      RESTARTS   AGE   IP            NODE         NOMINATED NODE   READINESS GATES
+ingress-nginx-admission-create--1-7glmr    0/1     Completed   0          11m   10.244.1.37   achen-node   <none>           <none>
+ingress-nginx-admission-patch--1-b6tfm     0/1     Completed   0          11m   10.244.1.38   achen-node   <none>           <none>
+ingress-nginx-controller-75f465cc7-5882c   1/1     Running     0          11m   10.128.0.35   achen-node   <none>           <none>
 ```
 
-The above pods and their status indicate the ingress controller has been installed properly.
+The above pods and their status indicate the ingress controller has been installed properly. You can also tell which node the ingress controller is running on.
 
 > ### now define an ingress service
 
@@ -108,10 +113,7 @@ spec:
             name: lab19external
             port:
               number: 80
-  - host: mynetid.alexchen.me
-    http:
-      paths:
-      - path: /
+        - path: /orange
         pathType: Prefix        
         backend:
           service:
