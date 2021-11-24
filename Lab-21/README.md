@@ -132,7 +132,7 @@ sudo kubeadm join 10.168.0.4:6443 --token v7ylqj --discovery-token-ca-cert-hash 
 ```bash
 kubectl get node
 ```
-
+<optional>
 17. set the kubectl on your workstation VM to point to the cluster created here
     ## Still remember how to do this? refer to lab 9, last two steps
 _hint, you may need to reset the permission of the admin.conf file on the master so that you can copy that file to your VM)_
