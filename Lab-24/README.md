@@ -28,7 +28,7 @@ vi deploy.yaml
         app.kubernetes.io/component: controller
     spec:
       dnsPolicy: ClusterFirst
-      hostNetwork: true <--- add this line
+      hostNetwork: true <--- add this line <span style="color:blue">hostNetwork: true </span>
       containers:
         - name: controller
           image: k8s.gcr.io/ingress-nginx/controller:v1.0.5@sha256:55a1fcda5b7657c372515fe402c3e39ad93aa59f6e4378e82acd99912fe6028d
