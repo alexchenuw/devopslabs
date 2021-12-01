@@ -82,6 +82,7 @@ spec:
           targetPort: 80
 
 ```
+```bash
 kubectl get svc
 ```
 * Create an Ingress yaml file called `ingress_example.yaml` based on the configuration example provided below.  This should expose a service named myfirst-ingress
