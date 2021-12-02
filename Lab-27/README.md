@@ -59,11 +59,11 @@ spec:
   replicas: 4
   selector:
     matchLabels:
-      app: nginxwebpod
+      app: mynginxwebpod
   template:
     metadata:
       labels:
-        app: nginxwebpod
+        app: mynginxwebpod
     spec:
       containers:
       - name: nginx
@@ -76,7 +76,7 @@ metadata:
     name: mylab27 
 spec: 
    selector: 
-     app: nginxwebpod 
+     app: mynginxwebpod 
    type: NodePort
    ports: 
         - protocol: TCP 
