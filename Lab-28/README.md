@@ -30,12 +30,12 @@ once it is added correctly, you should see a green check mark
 
 ![cd-3](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28_5.png)
 
-> 5. Choose Build via shell command
+> 5. Choose Build via shell command and put in docker commands and dockerhub login info to your repository
 
 ![cd-35](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28_6.png)
 
 
-> 6. Put in docker commands and dockerhub login info to your repository
+> 6. 
 
 ![cd-4](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28_7.png)
 
