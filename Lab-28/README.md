@@ -35,15 +35,11 @@ once it is added correctly, you should see a green check mark
 ![cd-35](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28_6.png)
 
 
-> 6. 
+> 6. ** Now try to build now to verify Jenkins can build the image and publish it to dockerhub for you
+
 
 ![cd-4](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28_7.png)
 
-
-
-** Now try to build now to verify Jenkins can build the image and publish it to dockerhub for you
-
-![ci-build](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab-28-ci-build.png)
 
 you can also check the console log for details/troubleshooting
 
