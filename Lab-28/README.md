@@ -23,21 +23,21 @@ once it is added correctly, you should see a green check mark
 
 > 3. Specify your git repository, the example shows instructor's github repo but you need specify yours
 
-![cd-2](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28_3.png)
+![cd-2](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28_4.png)
 
 
 > 4. Specify trigger as github webhook
 
-![cd-3](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab-28-ci-3.png)
+![cd-3](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28_5.png)
 
 > 5. Choose Build via shell command
 
-![cd-35](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab-28-ci-35.png)
+![cd-35](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28_6.png)
 
 
 > 6. Put in docker commands and dockerhub login info to your repository
 
-![cd-4](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab-28-ci-4.png)
+![cd-4](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28_7.png)
 
 
 
