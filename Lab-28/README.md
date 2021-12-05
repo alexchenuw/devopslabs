@@ -8,18 +8,18 @@ _This lab guide only covers the major steps/screencaptures for the lab, please d
 
 > 1. Setup a github webhook for your github repository that hosts the code you have for creating the new app
 
-![webhook](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28-1-webook.png)
+![webhook](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28_1.png)
 
 ## * now logon to Jenkins: http://34.121.19.249:8080/
 
 > 2. once logged in, create a freestyle job and name it with your netID, for example, achen-CI
 
-![cd-1](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28_1.png)
+![cd-1](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28_2.png)
 
 
 > 3. Specify your git repository, the example shows instructor's github repo but you need specify yours
 
-![cd-2](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28_2.png)
+![cd-2](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28_3.png)
 
 
 > 4. Specify trigger as github webhook
