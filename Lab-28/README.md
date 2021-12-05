@@ -40,18 +40,17 @@ once it is added correctly, you should see a green check mark
 
 ![cd-4](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28_7.png)
 
-
-you can also check the console log for details/troubleshooting
-
-![ci-console](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab-28-ci-console.png)
-
 if everything is successfull, you should find the image has been published at your dockerhub repository, go and verify
 This finishes the continunous Integration lab
+
+> 7. ** now make change to your app file (index.html to indicate it is now version 1.0.1), and commit the change then push to github.
+
+you should be able to see Jenkins project will automatically get notified on the update and it will build a new image for you and push the image to dockerhub.
 
 
 ## * now continue on Continuous Delivery lab
 
-> 7. choose to configure the project and at the after build actions
+> 8. choose to configure the project and at the after build actions
 
 ![cd-start](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28-cd-start.png)
 
