@@ -52,8 +52,10 @@ you should be able to see Jenkins project will automatically get notified on the
 
 > 8. choose to configure the project and at the after build actions
 
-![cd-start](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28-cd-start.png)
+![cd-start](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28_cd_1.png)
 
 > 8. Setup the SSH plugin to login to kubernetes kubectl to rollout the deplpoyment with the new image
 
-![cd-ssh](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab-28-cd-ssh.png)
+![cd-ssh](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28_cd_2.png)
+![cd-ssh](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28_cd_3.png)
+
