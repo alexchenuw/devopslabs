@@ -14,7 +14,7 @@ once it is added correctly, you should see a green check mark
 
 ![cd-1](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28_2.png)
 
-## * now logon to Jenkins: http://34.121.19.249:8080/
+## * now logon to Jenkins: http://35.208.78.177:8080/
 
 > 2. once logged in, create a freestyle job and name it with your netID, for example, achen-CI
 
@@ -57,5 +57,19 @@ you should be able to see Jenkins project will automatically get notified on the
 > 8. Setup the SSH plugin to login to kubernetes kubectl to rollout the deplpoyment with the new image
 
 ![cd-ssh](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28_cd_2.png)
+
+and pass the commmand to run on the k8s cluster:
+
 ![cd-ssh](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28_cd_3.png)
+
+> 9. Test out the result from node:
+get the nodeport service ip and port:
+```bash
+kubectl get svc
+```
+on external browser:
+```bash
+curl http://35.194.47.123:nodeport
+```
+
 
