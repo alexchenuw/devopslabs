@@ -8,19 +8,15 @@ This lab is to deploy a Ubuntu 16.04 LTS instance at Google Cloud and set up the
 * generate a ssh key pair on your local computer/laptop by running "sshkey-gen" under Windows Powershell or MacOS terminal
   
   ```
-  #ssh-keygen
+  #ssh-keygen -C "Your NetID"
   ```
-> Note: if you want to create a key pair just for this course and your system username does not match your UW NetId then you may want to create a unique key pair. Replace "$NetID" with your UW NetID username.
 
-```bash
-# ssh-keygen -C "$NetID" -f id_rsa_$NetID
-# cat ./id_rsa_$NetID
-```
+
 
 * keep all default settings and find where the generated file (.ssh/id_rsa.pub). and copy the text content of the file.
 
 
-> Part 2: Deploy a Ubuntu 16.04 LTS instance at Google Cloud.
+> Part 2: Deploy a Ubuntu 18.04 LTS instance at Google Cloud.
 
 
 * Log in with your UW email at https://console.cloud.google.com
@@ -29,7 +25,7 @@ This lab is to deploy a Ubuntu 16.04 LTS instance at Google Cloud and set up the
 
   ![Create a VM](https://github.com/alexchenuw/devopslabs/blob/main/Lab-1/lab1-1.png)
 
-* Specify the instance name as instance-1-yourNETID, change the boot Disk as Ubuntu 16.04 and the disk size to 100G
+* Specify the instance name as instance-1-yourNETID, change the boot Disk as Ubuntu 18.04 and the disk size to 30G
   ![instance name and disk and key](https://github.com/alexchenuw/devopslabs/blob/main/Lab-1/lab1-2.png)
   
   ![disk to ubuntu](https://github.com/alexchenuw/devopslabs/blob/main/Lab-1/lab1-3.png)
