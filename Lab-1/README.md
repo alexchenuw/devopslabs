@@ -1,11 +1,11 @@
 ## Lab 1. Deploying a VM instance into Google Cloud
 ____
 
-This lab is to deploy a Ubuntu 16.04 LTS instance at Google Cloud and set up the SSH key access to it.
+This lab is to deploy a Ubuntu 18.04 LTS instance at Google Cloud and set up the SSH key access to it.
 
 >Part 1: Grab the ssh public key from your local computer/laptop
 
-* generate a ssh key pair on your local computer/laptop by running "sshkey-gen" under Windows Powershell or MacOS terminal
+* generate a ssh key pair on your local computer/laptop by running "sshkey-gen" under Windows Powershell or MacOS terminal. (refer to this if you need install ssh clicent on your Windows 10. https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui#install-openssh-for-windows)
   
   ```
   #ssh-keygen -C "Your NetID"
