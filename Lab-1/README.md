@@ -5,7 +5,8 @@ This lab is to deploy a Ubuntu 18.04 LTS instance at Google Cloud and set up the
 
 >Part 1: Grab the ssh public key from your local computer/laptop
 
-* generate a ssh key pair on your local computer/laptop by running "sshkey-gen" under Windows Powershell or MacOS terminal. refer to [this article] (https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui#install-openssh-for-windows) if you need install ssh client on your Windows 10.
+* generate a ssh key pair on your local computer/laptop by running "sshkey-gen" under Windows Powershell or MacOS terminal. refer to 
+[this article](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui#install-openssh-for-windows) if you need install ssh client on your Windows 10.
   
   ```
   #ssh-keygen -C "Your NetID"
