@@ -43,6 +43,7 @@ git config --list
 ```
 * add your GitHub repository as a remote name in git (refer to the screenshot 3 for your repository link)
 ```
+git branch -M main
 git remote add origin git@github.com:your-repository-xxx-xxx/alieninvasion.git
 ```
 
@@ -57,7 +58,7 @@ git commit -m "This is my first commit to GitHub Repository"
 * push your files and folders to GitHub repository as the master branch
 
 ```shell
-git push origin master 
+git push origin main 
 ```
 * check your github repository, it should have the latest version of your code
 now anyone can clone your code from your github repository to their docker environment and run your app with one command "docker-compose up"
