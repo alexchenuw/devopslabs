@@ -33,7 +33,7 @@ mkdir -p $HOME/.kube
 * Now copy the cluster admin configure file to your .kube directory as "config" file.  Note the password for the remote user is **uwdevops**.  Once you have the file copied over locally review the contents of that file.
 
 ```bash
-scp devops@10.128.0.29:/etc/kubernetes/admin.conf $HOME/.kube/config
+scp devops@10.128.0.23:/etc/kubernetes/admin.conf $HOME/.kube/config
 cat $HOME/.kube/config
 grep "cluster\|server" .kube/config
 ```
