@@ -4,6 +4,9 @@ ___
 _With Lab 19, we will be creating a deployment and then expose the deployment as a service for external users as NodePort, this will be a very typical application deployment scenario_
 _we will also experience how a replicaset plays its role to maintain a desired number of pods_
 
+_Notice to students:  by the time this lab begins the our small K8s environment is starting to run low on resources.  Make sure you delete your old pods and services to free up space for these deployments that are launching multiple pods._
+
+
 > create a deployment file called `lab19_deployment.yaml` replace ${USER} with your userID
 
 ```yaml
