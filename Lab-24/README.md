@@ -11,7 +11,7 @@ https://kubernetes.github.io/ingress-nginx/deploy/#bare-metal-clusters
 * we will need to make changes in the deployment yaml file, so using wget copy the nginx deploy.yaml file locally first.
 
 ```bash
-wget https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.0.5/deploy/static/provider/baremetal/deploy.yaml
+wget https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.5.1/deploy/static/provider/cloud/deploy.yaml
 ```
 
 * Modify the deployment definition to add a line of "hostNetwork: true" to the ingress controller so that the NGINX pod can access to hostnetwork:
