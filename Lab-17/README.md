@@ -49,7 +49,7 @@ spec:
 * create the pod with kubectl
 
 ```bash
-kubectl create -f pod_use_configmap.yaml
+kubectl create -f player_configmap_pod.yaml
 kubectl get pod/configmap-game -o wide
 ```
 * log into the pod/container to verify if the variables have been passed into the containers.
