@@ -21,7 +21,7 @@ kubectl get replicaset
 * scale the deployment to 10 pods from 4 pods
 
 ```
-kubectl scale deployment achenwebdemo --replicas=10
+kubectl scale deployment achenwebdemo --replicas=2
 kubectl get deployment achenwebdemo
 kubectl get pod
 ```
