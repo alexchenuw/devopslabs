@@ -3,7 +3,7 @@ ___
 
 > ### Install Metrics Server to your cluster
 
-* Locate the installation guide at[https://github.com/kubernetes-sigs/metrics-server#installation]
+* Locate the installation guide at https://github.com/kubernetes-sigs/metrics-server#installation
 
 * we will need to make changes in the deployment yaml file, so using wget copy the Metric Server deployment file locally first.
 
