@@ -11,7 +11,7 @@ ___
 wget https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
 ```
 
-* Modify the deployment file and add one line as "- --kubelet-insecure-tls" and also modify the other line to set the preferred-address as internalIP:
+* locate and modify one of the line configuration "- --kubelet-preferred-address-types=" and set it to InternalIP only, and add one line as "- --kubelet-insecure-tls":
 ```
 vi components.yaml
 ```
