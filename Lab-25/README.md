@@ -8,7 +8,8 @@ a couple of key points are at https://kubernetes.io/docs/tasks/access-applicatio
 
 * deploy the application into the cluster
 ```
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0/aio/deploy/recommended.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.6.1/aio/deploy/recommended.yaml
+
 ```
 
 * create a service account and a cluster role to get the token
