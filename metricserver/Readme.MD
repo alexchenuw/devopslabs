@@ -5,14 +5,13 @@ ___
 
 * Locate the installation guide at https://github.com/kubernetes-sigs/metrics-server#installation
 
-* we will need to make changes in the deployment yaml file, so using wget copy the Metric Server deployment file locally first.
+* we will need to make changes in the deployment yaml file, therefore using wget to download the Metric Server deployment file to local first.
 
 ```bash
 wget https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
 ```
 
-* Modify the deployment definition to add a line of "hostNetwork: true" to the ingress controller so that the NGINX pod can access to hostnetwork:
-```bash
+* Modify the deployment file and add one line as "- --kubelet-insecure-tls" and also modify the other line to set the preferred-address as internalIP:
 vi components.yaml
 ```
 
@@ -25,18 +24,14 @@ vi components.yaml
 ```
 kubectl create -f components.yaml
 ```
-* Verify if the ingress controller has been installed properly:
+* Verify if the metrics server has been installed properly:
 
 ```
 kubectl get pod -A |grep metrics
 kube-system     metrics-server-7554578fc-zp6zj              1/1     Running            0                  57s
 ```
 
-The above pods and their status indicate the ingress controller has been installed properly. You can also tell which node the ingress controller is running on. (also here please tell the instructor your ingress-controller ip as he will need to update the DNS record for your future usage, in this example, ingress controller ip is 10.128.0.35)
-
-> ### now define an ingress service
-
-* create a pod and expose it as a service
+* now you can use kubectl top command to get the resource usage info on the node and pod level
 
 ```
 kubectl top node
