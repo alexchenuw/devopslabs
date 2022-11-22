@@ -42,7 +42,7 @@ kubectl create -f create_user_token.yaml
 get the token:
 
 ```
-kubectl -n kubernetes-dashboard describe secret admin-user
+kubectl -n kubernetes-dashboard create token admin-user
 ```
 
 * start the dashboard with
