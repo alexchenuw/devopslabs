@@ -1,4 +1,4 @@
-## Lab. Install a single node k3s cluster
+## Lab k3s installation. Install a single node k3s cluster
 ___
 > ### Provision the VM environment by creating 1 VM
 
