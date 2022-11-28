@@ -10,7 +10,18 @@ mkdir lab_27 && cd lab_27
 ```
 create an index.html file with the following content
 ```html
-<center><h1>This is version 1.0.0</center>
+<!DOCTYPE HTML> 
+<html> 
+<head> 
+<title>This is version 1.0</title> 
+</head> 
+ 
+<body> 
+<div style="width: 300px; height: 300px; background-color: #336699">&nbsp;
+<center><br><br><h1>This is version 1.0</h1></center>
+</div> 
+</body> 
+</html> 
 ```
 create a Dockerfile with the content
 ```yaml
