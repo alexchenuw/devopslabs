@@ -16,10 +16,11 @@ create an index.html file with the following content
 <title>This is version 1.0</title> 
 </head> 
  
-<body> 
-<div style="width: 300px; height: 300px; background-color: #336699">&nbsp;
+<body> <center>
+<div style="width:300px; height: 200px; background-color:green">;
 <center><br><br><h1>This is version 1.0</h1></center>
 </div> 
+</center>
 </body> 
 </html> 
 ```
