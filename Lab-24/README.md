@@ -20,19 +20,20 @@ vi deploy.yaml
 ```
 
 ```yaml
-   template:
-    metadata:
-      labels:
-        app.kubernetes.io/name: ingress-nginx
-        app.kubernetes.io/instance: ingress-nginx
-        app.kubernetes.io/component: controller
-    spec:
+        volumeMounts:
+        - mountPath: /usr/local/certificates/
+          name: webhook-cert
+          readOnly: true
       dnsPolicy: ClusterFirst
-      hostNetwork: true   <--- add this line 
-      containers:
-        - name: controller
-          image: k8s.gcr.io/ingress-nginx/controller:v1.0.5@sha256:55a1fcda5b7657c372515fe402c3e39ad93aa59f6e4378e82acd99912fe6028d
-          imagePullPolicy: IfNotPresent   
+      hostNetwork: true <-----add this one line only
+      nodeSelector:
+        kubernetes.io/os: linux
+      serviceAccountName: ingress-nginx
+      terminationGracePeriodSeconds: 300
+      volumes:
+      - name: webhook-cert
+        secret:
+          secretName: ingress-nginx-admission
 ``` 
 
 * Now install the NGINX ingress controller by applying the deployment yaml file:
