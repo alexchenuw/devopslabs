@@ -69,7 +69,34 @@ kubectl get svc
 ```
 on external browser:
 ```bash
-curl http://35.194.47.123:nodeport
+http://104.154.96.165:nodeport
 ```
+
+>10. Make a change on your index.html file (change version to 1.0.1 and background color to red) and push the new files to github
+on your file folder at your local workstation
+```
+<!DOCTYPE HTML> 
+<html> 
+<head> 
+<title>This is version 1.0</title> 
+</head> 
+ 
+<body> <center>
+<div style="width:300px; height: 200px; background-color:red">
+<center><br><br><h1>This is version 1.0.1</h1></center>
+</div> 
+</center>
+</body> 
+</html> 
+```
+push to github
+```
+git add .
+git commit -m "this is version 1.0.1"
+git push -u origin main
+```
+
+refresh your web application webpage, you should see your application is now at version 1.0.1
+
 
 
