@@ -52,15 +52,13 @@ you should be able to see Jenkins project will automatically get notified on the
 
 > 8. choose to configure the project and at the after build actions
 
-![cd-start](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28_cd_1.png)
+![cd-start](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28_cd_11.png)
 
-> 8. Setup the SSH plugin to login to kubernetes kubectl to rollout the deplpoyment with the new image
+> 8. Setup the SSH plugin to login to kubernetes kubectl to rollout the deplpoyment with the new image and pass the commmand to run on the k8s cluster:
 
-![cd-ssh](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28_cd_2.png)
 
-and pass the commmand to run on the k8s cluster:
+![cd-ssh](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28_cd_21.png)
 
-![cd-ssh](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28_cd_3.png)
 
 > 9. Test out the result from node:
 get the nodeport service ip and port:
