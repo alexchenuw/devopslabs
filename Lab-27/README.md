@@ -144,5 +144,5 @@ access your app from external (for example your laptop) via your browser:
 
 http://104.154.96.165:nodeport
 
-now you are ready for Lab 28!
+****---*** now you are ready for Lab 28!***----***
 
