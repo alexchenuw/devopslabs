@@ -120,8 +120,29 @@ scp devops@10.128.0.23:/etc/kubernetes/admin.conf $HOME/.kube/config
 
 your kubectl get node should show you are on the instructor cluster now
 ```
-kubectl get node
+chenalex@instance-2-achen:~$ kubectl get node
+NAME        STATUS   ROLES           AGE   VERSION
+k8smaster   Ready    control-plane   35d   v1.25.3
+k8snode1    Ready    <none>          35d   v1.25.3
+k8snode2    Ready    <none>          35d   v1.25.3
+```
+and set your kubectl to point to your namespace you created a few weeks back at lab9 on the cluster
+
+```
+kubectl config set-context --current --namespace=YOUR_NAME_SAPCE
 ```
 
+now deploy the lab27_4 deployment again and get the node port service port:
+```
+kubectl create -f deployment_lab27_4.yaml
+```
+find the nodeport service port
+```
+kubectl get svc
+```
+access your app from external (for example your laptop) via your browser:
 
+http://104.154.96.165:nodeport
+
+now you are ready for Lab 28!
 
