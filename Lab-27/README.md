@@ -110,6 +110,18 @@ access your app from external (for example your laptop) via your browser:
 http://the-node-public-ip:nodeport
 
 
+* >lab 27-5. now switch your kubectl to connect the instructor's k8s cluster by copying the kube config file over and override your current one:
+
+on your gcp vm workstation: 
+
+```
+scp devops@10.128.0.23:/etc/kubernetes/admin.conf $HOME/.kube/config
+```
+
+your kubectl get node should show you are on the instructor cluster now
+```
+kubectl get node
+```
 
 
 
