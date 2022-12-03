@@ -8,11 +8,11 @@ _This lab guide only covers the major steps/screencaptures for the lab, please d
 
 > 1. Setup a github webhook for your github repository that hosts the code you have for creating the new app
 
-![webhook](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28_1.png)
+![webhook](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28_11.png)
 
 once it is added correctly, you should see a green check mark
 
-![cd-1](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28_2.png)
+![cd-1](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28_21.png)
 
 ## * now logon to Jenkins: http://http://35.232.214.88:8080/
 
