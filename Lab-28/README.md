@@ -14,7 +14,7 @@ once it is added correctly, you should see a green check mark
 
 ![cd-1](https://github.com/alexchenuw/devopslabs/blob/main/Lab-28/lab28_21.png)
 
-## * now logon to Jenkins: http://http://35.232.214.88:8080/
+## * now logon to Jenkins: http://35.232.214.88:8080/
 
 > 2. once logged in, create a freestyle job and name it with your netID, for example, achen-CI
 
