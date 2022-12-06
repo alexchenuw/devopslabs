@@ -110,9 +110,9 @@ access your app from external (for example your laptop) via your browser:
 http://the-node-public-ip:nodeport
 
 
-* >lab 27-5. now switch your kubectl to connect the instructor's k8s cluster by copying the kube config file over and override your current one:
+* >lab 27-5. now switch your kubectl to connect the instructor's k8s cluster by copying the kube config file over and override your current one
 
-on your gcp vm workstation: 
+on your gcp vm workstation:  use uwdevops as the password here.
 
 ```
 scp devops@10.128.0.23:/etc/kubernetes/admin.conf $HOME/.kube/config
