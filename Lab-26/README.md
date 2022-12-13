@@ -32,7 +32,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:1.18.0
+        image: alexchen2015/lab28:v1.4.0
               
 ---
 apiVersion: v1 
